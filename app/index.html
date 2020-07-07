@@ -6,12 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MartPlace</title>
 
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-inner">
+                    <a class="header__logo" href="#">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+                    <div class="header__top-links">
+                        <a class="header__btn" href="#">
+                             Become a Seller
+                        </a>
+                        <ul class="header__icons">
+                            <li class="header__icons-item">
+                                <a class="header__icon header__icon--alarm" href="#">
+                                    <svg class="lnr lnr-alarm"><use xlink:href="#lnr-alarm"></use></svg> notification
+                                </a>
+                            </li>
+                            <li class="header__icons-item">
+                                <a class="header__icon header__icon--envelope" href="#">
+                                    <svg class="lnr lnr-envelope"><use xlink:href="#lnr-envelope"></use></svg> message
+                                </a>
+                            </li>
+                            <li class="header__icons-item">
+                                <a class="header__icon header__icon--cart" href="#">
+                                    <svg class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use></svg> cart
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__user">
+                        <a class="header__avatar" href="#" style="background-image: url(images/avatar.jpg);"></a>
+                        <div class="header__user-info">
+                            <a class="header__user-name" href="#">
+                                Taofiq Hakim
+                            </a>
+                            <div class="header__user-balance">$20.45</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header__nav-inner">
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#" class="header__link">Home</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">All Products</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Wordpress</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Features</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Pages</a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <form class="header__search">
+                    <input class="header__search-input" type="text" placeholder="Search product here..." required>
+                    <button class="header__search-btn" type="submit">
+                        <svg class="lnr lnr-magnifier"><use xlink:href="#lnr-magnifier"></use></svg>
+                    search-button
+                </button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>

@@ -9,11 +9,24 @@ html {
 }
 
 a {
+    display: inline-block;
     text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1170px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+body {
+    @extend %quicksand-regular;
+    font-size: 16px;
+    line-height: 30px;
 }
