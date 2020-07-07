@@ -1,5 +1,6 @@
 @import 'vars';
 @import 'global';
+@import 'fonts';
 .header {
     &__top {
         background-color: #eef1f3;
@@ -27,6 +28,14 @@
         background-color: $blue;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
         border-radius: 16px;
+        transition: all .3s;
+        &:hover,
+        &:focus {
+            transform: scale(1.1);
+        }
+        &:active {
+            box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.66);
+        }
     }
     &__icons,
     &__list {
@@ -56,7 +65,7 @@
         margin-right: 20px;
     }
     &__user-name {
-        @extend %quicksand-bold;
+        @extend %quicksand-medium;
         color: #333333;
     }
     &__user-balance {
@@ -73,11 +82,20 @@
         margin-left: 34px;
     }
     &__link {
-        font-family: 'Quicsand', sans-serif;
-        font-weight: 500;
+        @extend %quicksand-medium;
         font-size: 15px;
         color: #333333;
         text-transform: uppercase;
+        transition: all .3s;
+        &:hover {
+            color: $blue;
+        }
+        &:active {
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+    }
+    &__link--active {
+        color: $blue;
     }
     &__search {
         max-width: 360px;
@@ -87,6 +105,7 @@
     &__search-input {
         border: 1px solid #e4e8ed;
         padding: 8px 22px;
+        padding-right: 90px;
         width: 100%;
         font-size: 15px;
         line-height: 30px;
@@ -109,6 +128,11 @@
         background-color: $blue;
         font-size: 0;
         border: none;
+        outline: transparent;
+        cursor: pointer;
+        &:active {
+            box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.66);
+        }
     }
 }
 
@@ -155,4 +179,123 @@
 .header__icon--cart::after {
     content: "2";
     background-color: #0674ec;
+}
+
+.greeting {
+    background-color: $bg-blue;
+    color: #fff;
+    text-align: center;
+    padding: 165px 220px;
+    position: relative;
+    &__title {
+        margin-bottom: 35px;
+        font-size: 60px;
+        line-height: 70px;
+        span {
+            display: block;
+            @extend %quicksand-bold;
+        }
+    }
+    &__text {
+        @extend %quicksand-medium;
+        font-size: 20px;
+        margin-bottom: 65px;
+    }
+    &__buttons {}
+    &__btn+&__btn {
+        margin-left: 30px;
+    }
+    &__btn {
+        padding: 11px 30px;
+        box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+        border: 1px solid #fff;
+        border-radius: 27px;
+        background-color: transparent;
+        transition: all .3s;
+        &:hover {
+            background-color: #fff;
+            color: $bg-blue;
+        }
+        &:active {
+            box-shadow: inset 0px 3px 0 0px rgba(0, 0, 0, 0.66);
+        }
+    }
+    &__search {
+        position: absolute;
+        z-index: 3;
+        bottom: -66px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        max-width: 1140px;
+        padding: 40px;
+        background-color: #fff;
+        display: flex;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+        &::after,
+        &::before {
+            position: absolute;
+            content: "";
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            height: 135px;
+            border-radius: 6px;
+            opacity: 0.502;
+            z-index: -1;
+        }
+        &::before {
+            width: 97%;
+            top: -13px;
+            background-image: url(../images/search-bg-1.jpg);
+        }
+        &::after {
+            // z-index: 1;
+            width: 94%;
+            top: -26px;
+            background-image: url(../images/search-bg-2.jpg);
+        }
+    }
+    &__input {
+        max-width: 610px;
+        padding: 0 28px;
+        width: 100%;
+        height: 55px;
+        border: 1px solid #dcdcdc;
+        &::placeholder {
+            @extend %quicksand-regular;
+            font-size: 16px;
+            color: $gray;
+        }
+    }
+    &__list {
+        margin-right: 30px;
+        max-width: 195px;
+        padding: 15px;
+        width: 100%;
+        height: 55px;
+        border: 1px solid #dcdcdc;
+        border-left: none;
+        -webkit-appearance: none;
+        background: url(../images/icons/arrow-down.svg) no-repeat right;
+        background-position-x: 160px;
+    }
+    &__search-btn {
+        padding: 7px 66px;
+        line-height: 42px;
+        border: none;
+        border-radius: 4px;
+        height: 55px;
+        background-color: $blue;
+        color: #fff;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            background-color: $bg-blue;
+        }
+        &:active {
+            box-shadow: inset 0px 3px 0 0px rgba(0, 0, 0, 0.66);
+        }
+    }
 }
