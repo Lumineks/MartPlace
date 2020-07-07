@@ -14,7 +14,13 @@ a {
     color: inherit;
 }
 
-ul {
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+p {
     margin: 0;
     padding: 0;
 }
@@ -30,4 +36,27 @@ body {
     font-size: 16px;
     line-height: 30px;
     color: $text;
+}
+
+.likes,
+.purchases {
+    display: flex;
+    align-items: center;
+    .lnr {
+        margin-right: 10px;
+    }
+    .lnr-heart {
+        color: $pink;
+    }
+    .lnr-cart {
+        color: $blue;
+    }
+}
+
+.likes {
+    color: $pink;
+}
+
+.purchases {
+    color: $blue;
 }

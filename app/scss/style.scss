@@ -347,3 +347,156 @@
     }
     &__text {}
 }
+
+.weekly-products {
+    padding: 120px 0;
+    background-color: #eff1f5;
+    &__title {
+        margin-bottom: 50px;
+        padding: 37px 30px;
+        background-color: #fff;
+        font-size: 30px;
+        line-height: 36px;
+        color: #000;
+        border-radius: 4px;
+        box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+    }
+    &__item {
+        display: flex !important;
+    }
+    &__link {
+        width: 50%;
+        height: 450px;
+    }
+    &__image {
+        object-fit: contain;
+    }
+    &__info {
+        width: auto;
+        padding: 50px 45px 25px;
+        border-radius: 4px;
+        max-height: 450px;
+        box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
+        background-color: #fff;
+    }
+    &__name {
+        margin-bottom: 15px;
+        @extend %quicksand-medium;
+        font-size: 24px;
+        color: #000;
+    }
+    &__author {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &__avatar {
+        margin-right: 9px;
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    &__author-name {
+        color: #000;
+    }
+    &__category {
+        position: relative;
+        margin-left: 20px;
+        padding-left: 25px;
+        font-size: 15px;
+        color: $pink;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 0;
+            background-image: url(../images/icons//wordpress-icon.svg);
+            width: 16px;
+            height: 16px;
+        }
+    }
+    &__description {
+        margin-bottom: 40px;
+    }
+    &__tags {
+        list-style: none;
+        margin-bottom: 38px;
+    }
+    &__tag {
+        display: inline-block;
+    }
+    &__tag+&__tag {
+        margin-left: 7px;
+    }
+    &__tag-link {
+        padding: 0 15px;
+        background-color: #f1f3f6;
+        font-size: 15px;
+        color: #868c96;
+        border-radius: 14px;
+        transition: all .3s;
+        &:hover {
+            color: #000;
+        }
+        &:active {
+            box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.66);
+        }
+    }
+    &__rate {
+        display: flex;
+        padding-top: 22px;
+        border-top: 1px solid #ececec;
+    }
+    &__price {
+        margin-right: 20px;
+        padding: 0 17px;
+        background-color: $blue;
+        border-radius: 16px;
+        color: #fff;
+        @extend %quicksand-medium;
+    }
+    &__likes {
+        margin-right: 18px;
+    }
+    &__stars {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+    &__star {
+        width: 15px;
+        height: 14px;
+    }
+    &__star+&__star {
+        margin-left: 3px;
+    }
+}
+
+.slick-arrow {
+    position: absolute;
+    top: -130px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 23px;
+    background-color: $pink;
+    outline: transparent;
+    cursor: pointer;
+}
+
+.slick-prev {
+    right: 55px;
+    padding-right: 40px;
+}
+
+.slick-next {
+    right: 25px;
+    padding-left: 40px;
+}
+
+.lnr-chevron-right,
+.lnr-chevron-left {
+    color: #fff;
+    font-size: 15px;
+}
