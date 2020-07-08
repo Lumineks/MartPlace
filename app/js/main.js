@@ -5,4 +5,10 @@ $(function() {
         infinite: true,
         autoplay: 3000,
     });
+
+    var mixer = mixitup('.newest-products__items');
+
+    $('.greeting__list').on('click', function() {
+        $('.greeting__list').toggleClass('active')
+    });
 });

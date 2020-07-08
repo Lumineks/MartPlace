@@ -43,7 +43,7 @@ body {
     display: flex;
     align-items: center;
     .lnr {
-        margin-right: 10px;
+        margin-right: 8px;
     }
     .lnr-heart {
         color: $pink;
@@ -59,4 +59,27 @@ body {
 
 .purchases {
     color: $blue;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.author-name {
+    color: #000;
+}
+
+.category {
+    position: relative;
+    font-size: 15px;
+    color: $pink;
 }
