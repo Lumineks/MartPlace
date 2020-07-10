@@ -8,11 +8,30 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 99px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
         &--product {
             background-image: url(../images/offer-bg.jpg);
+            &::before {
+                width: 120px;
+                height: 100px;
+                background-image: url(../images/icons/offer-icon-1.svg);
+            }
         }
         &--shopping {
             background-image: url(../images/offer-bg-2.jpg);
+            &::before {
+                width: 100px;
+                height: 100px;
+                background-image: url(../images/icons/offer-icon-2.svg);
+            }
         }
     }
     &__title {
@@ -21,13 +40,13 @@
         margin-bottom: 27px;
     }
     &__text {
-        max-width: 630px;
+        max-width: 600px;
         margin: 0 auto;
         color: #fff;
         margin-bottom: 47px;
     }
     &__link {
-        padding: 10px 25px;
+        padding: 12px 27px;
         color: $blue;
         background-color: #fff;
         border-radius: 25px;
