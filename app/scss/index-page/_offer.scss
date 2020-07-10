@@ -1,0 +1,41 @@
+.offer {
+    display: flex;
+    min-height: 560px;
+    &__item {
+        width: 50%;
+        padding: 240px 0 90px;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &--product {
+            background-image: url(../images/offer-bg.jpg);
+        }
+        &--shopping {
+            background-image: url(../images/offer-bg-2.jpg);
+        }
+    }
+    &__title {
+        font-size: 36px;
+        color: #fff;
+        margin-bottom: 27px;
+    }
+    &__text {
+        max-width: 630px;
+        margin: 0 auto;
+        color: #fff;
+        margin-bottom: 47px;
+    }
+    &__link {
+        padding: 10px 25px;
+        color: $blue;
+        background-color: #fff;
+        border-radius: 25px;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &:active {
+            box-shadow: inset 7px 7px 7px 7px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
