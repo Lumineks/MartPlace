@@ -3,3 +3,35 @@
 @import 'global';
 @import 'components/header';
 @import 'index';
+.banner {
+    background-color: #000;
+    background-image: url(../images/banner-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 110px 0;
+    text-align: center;
+    &__title {
+        font-size: 36px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+    &__text {
+        font-size: 18px;
+        color: #fff;
+        margin-bottom: 50px;
+    }
+    &__link {
+        color: $blue;
+        padding: 12px 43px;
+        border-radius: 26px;
+        background-color: #fff;
+        transition: all .3s;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &:active {
+            box-shadow: inset 7px 7px 7px 7px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
