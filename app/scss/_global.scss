@@ -14,13 +14,13 @@ a {
     color: inherit;
 }
 
-ul,
-li {
-    margin: 0;
-    padding: 0;
-}
-
-p {
+.header__icons,
+.header__list,
+.card-tags,
+.newest-products__filter-list,
+.newest-products__filters,
+.greeting__text,
+.card-text {
     margin: 0;
     padding: 0;
 }
@@ -32,18 +32,159 @@ p {
 }
 
 body {
-    @extend %quicksand-regular;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
     font-size: 16px;
     line-height: 30px;
     color: $text;
+}
+
+.lnr {
+    width: 1em;
+    height: 1em;
+    font-size: 18px;
+    fill: currentColor;
+    transition: all .3s;
+}
+
+.lnr-chevron-right,
+.lnr-chevron-left {
+    color: #fff;
+    font-size: 15px;
+}
+
+.btn {
+    color: #fff;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+    outline: transparent;
+    transition: all .3s;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 3px solid transparent;
+        border-radius: inherit;
+    }
+    &:hover {
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15);
+    }
+    &:active {
+        box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+    }
+    &:focus::before {
+        border-color: #000;
+    }
+}
+
+.title {
+    font-size: 30px;
+    line-height: 36px;
+    color: #000;
+}
+
+.card-info {
+    border-radius: 4px;
+    box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
+    background-color: #fff;
+}
+
+.card-name {
+    font-weight: 500;
+    font-size: 24px;
+    color: #000;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.author-name {
+    color: #000;
+}
+
+.category {
+    position: relative;
+    font-size: 15px;
+    color: $pink;
+}
+
+.category-icon {
+    display: block;
+    position: absolute;
+    left: 0;
+    background-repeat: no-repeat;
+}
+
+.card-tags {
+    list-style: none;
+    overflow: auto;
+}
+
+.card-tag {
+    display: inline-block;
+}
+
+.card-tag__link {
+    background-color: #f1f3f6;
+    font-size: 15px;
+    color: #868c96;
+    border-radius: 14px;
+    box-shadow: none;
+}
+
+.card-text {
+    overflow: auto;
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: #000;
+        cursor: pointer;
+    }
+}
+
+.rate {
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    font-weight: 500;
+    font-size: 15px;
+    color: $blue;
+    padding: 0 17px;
+    border-radius: 15px;
+    background-color: #e6f1fd;
 }
 
 .likes,
 .purchases {
     display: flex;
     align-items: center;
+    background-color: transparent;
+    border: none;
+    outline: transparent;
+    cursor: pointer;
+    padding: 0;
     .lnr {
         margin-right: 8px;
+        font-size: 15px;
     }
     .lnr-heart {
         color: $pink;
@@ -59,27 +200,4 @@ body {
 
 .purchases {
     color: $blue;
-}
-
-.author {
-    display: flex;
-    align-items: center;
-}
-
-.avatar {
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.author-name {
-    color: #000;
-}
-
-.category {
-    position: relative;
-    font-size: 15px;
-    color: $pink;
 }

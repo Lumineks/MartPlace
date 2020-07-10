@@ -1,0 +1,187 @@
+.header {
+    &__top {
+        background-color: #eef1f3;
+    }
+    &__top-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+    &__logo {
+        margin-left: 7px;
+    }
+    &__top-links {
+        margin-left: auto;
+        margin-right: 50px;
+        display: flex;
+    }
+    &__btn {
+        margin-right: 53px;
+        padding: 4px 18px;
+        font-size: 14px;
+        line-height: 28px;
+        color: #fff;
+        background-color: $blue;
+        border-radius: 18px;
+    }
+    &__icons,
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    &__icons-item {
+        height: 20px;
+        &+& {
+            margin-left: 30px;
+        }
+    }
+    &__icon {
+        font-size: 0;
+        position: relative;
+        span {
+            position: absolute;
+            top: -23px;
+            right: -15px;
+            width: 27px;
+            height: 27px;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            border-radius: 50%;
+        }
+        &--alarm {
+            span {
+                background-color: #ff6a6c;
+            }
+            &:hover .lnr {
+                color: #ff6a6c;
+            }
+            &:focus .lnr {
+                color: #ff6a6c;
+            }
+        }
+        &--envelope {
+            span {
+                background-color: #62d03b;
+            }
+            &:hover .lnr {
+                color: #62d03b;
+            }
+            &:focus .lnr {
+                color: #62d03b;
+            }
+        }
+        &--cart {
+            span {
+                background-color: #0674ec;
+            }
+            &:hover .lnr {
+                color: #0674ec;
+            }
+            &:focus .lnr {
+                color: #0674ec;
+            }
+        }
+    }
+    .lnr {
+        color: #7e8fa1;
+    }
+    &__user {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        line-height: 22px;
+    }
+    &__avatar {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-right: 30px;
+    }
+    &__user-name {
+        display: block;
+        font-weight: 500;
+        color: #333333;
+    }
+    &__user-balance {
+        display: block;
+        font-weight: 400;
+        color: #0674ec;
+    }
+    &__nav-inner {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        &+& {
+            margin-left: 34px;
+        }
+    }
+    &__link {
+        font-weight: 500;
+        font-size: 15px;
+        color: #333333;
+        text-transform: uppercase;
+        transition: all .3s;
+        &:hover {
+            color: $blue;
+        }
+        &:active {
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+        &--active {
+            color: $blue;
+        }
+    }
+    &__search {
+        max-width: 360px;
+        width: 100%;
+        position: relative;
+    }
+    &__search-input {
+        border: 1px solid #e4e8ed;
+        padding: 8px 22px;
+        padding-right: 90px;
+        width: 100%;
+        font-size: 15px;
+        line-height: 30px;
+        color: #898f96;
+        border-radius: 23px;
+        outline: transparent;
+        transition: all .3s;
+        &:hover {
+            border-color: rgb(71, 190, 181);
+        }
+        &:focus {
+            border-color: #000;
+        }
+        &::placeholder {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 30px;
+            color: #898f96;
+        }
+    }
+    &__search-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 14px 27px;
+        border-radius: 23px;
+        background-color: $blue;
+        font-size: 0;
+        border: none;
+        outline: transparent;
+        cursor: pointer;
+    }
+    .lnr-magnifier {
+        color: #fff;
+    }
+}

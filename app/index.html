@@ -23,36 +23,39 @@
                         <img src="images/logo.png" alt="logo">
                     </a>
                     <div class="header__top-links">
-                        <a class="header__btn" href="#">
+                        <a class="header__btn btn" href="#">
                              Become a Seller
                         </a>
                         <ul class="header__icons">
                             <li class="header__icons-item">
                                 <a class="header__icon header__icon--alarm" href="#">
-                                    <svg class="lnr lnr-alarm"><use xlink:href="#lnr-alarm"></use></svg> notification
+                                    <svg class="lnr lnr-alarm"><use xlink:href="#lnr-alarm"></use></svg>
+                                    <span class="header__icon-number">25</span> notification
                                 </a>
                             </li>
                             <li class="header__icons-item">
                                 <a class="header__icon header__icon--envelope" href="#">
-                                    <svg class="lnr lnr-envelope"><use xlink:href="#lnr-envelope"></use></svg> message
+                                    <svg class="lnr lnr-envelope"><use xlink:href="#lnr-envelope"></use></svg>
+                                    <span class="header__icon-number">6</span> message
                                 </a>
                             </li>
                             <li class="header__icons-item">
                                 <a class="header__icon header__icon--cart" href="#">
-                                    <svg class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use></svg> cart
+                                    <svg class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use></svg>
+                                    <span class="header__icon-number">2</span> cart
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="header__user">
-                        <a class="header__avatar" href="#" style="background-image: url(images/avatar.jpg);"></a>
+                    <a class="header__user" href="#">
+                        <span class="header__avatar" style="background-image: url(images/avatar.jpg);"></span>
                         <div class="header__user-info">
-                            <a class="header__user-name" href="#">
+                            <span class="header__user-name">
                                 Taofiq Hakim
-                            </a>
-                            <div class="header__user-balance">$20.45</div>
+                            </span>
+                            <span class="header__user-balance">$20.45</span>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -80,7 +83,7 @@
                 </nav>
                 <form class="header__search">
                     <input class="header__search-input" type="text" placeholder="Search product here..." required>
-                    <button class="header__search-btn" type="submit">
+                    <button class="header__search-btn btn" type="submit">
                         <svg class="lnr lnr-magnifier"><use xlink:href="#lnr-magnifier"></use></svg>
                     search-button
                 </button>
@@ -100,11 +103,11 @@
                     MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products
                 </p>
                 <div class="greeting__buttons">
-                    <a href="#" class="greeting__btn">View All Products</a>
-                    <a href="#" class="greeting__btn">Popular Products</a>
+                    <a href="#" class="greeting__btn btn">View All Products</a>
+                    <a href="#" class="greeting__btn btn">Popular Products</a>
                 </div>
                 <form class="greeting__search">
-                    <input class="greeting__input" type="text" placeholder="Search your products..." required>
+                    <input class="greeting__input" type="search" placeholder="Search your products..." required>
                     <select class="greeting__list">
                         <option value="">All Categories</option>
                         <option value="">Plugins</option>
@@ -124,7 +127,7 @@
         <section class="benefits">
             <div class="container">
                 <div class="benefits__inner">
-                    <div class="benefits__item benefits__item-1">
+                    <div class="benefits__item benefits__item--1">
                         <div class="benefits__title">
                             Best UX Research
                         </div>
@@ -132,7 +135,7 @@
                             Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.
                         </div>
                     </div>
-                    <div class="benefits__item benefits__item-2">
+                    <div class="benefits__item benefits__item--2">
                         <div class="benefits__title">
                             Fully Responsive
                         </div>
@@ -140,7 +143,7 @@
                             Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.
                         </div>
                     </div>
-                    <div class="benefits__item benefits__item-3">
+                    <div class="benefits__item benefits__item--3">
                         <div class="benefits__title">
                             Buy & Sell Easily
                         </div>
@@ -152,96 +155,93 @@
             </div>
         </section>
 
-        <section class="weekly-products">
+        <section class="weekly-products slider-head">
             <div class="container">
-                <div class="weekly-products__title">
-                    Weekly Featured Products
+                <div class="weekly-products__top slider-head__inner">
+                    <div class="weekly-products__title title">
+                        Weekly Featured Products
+                    </div>
+                    <div class="weekly-products__arrows slider-head__arrows"></div>
                 </div>
                 <div class="weekly-products__slider">
                     <div class="weekly-products__item">
-                        <a class="weekly__products__link" href="#"><img class="weekly-products__image" src="images/slider-image-1.jpg" alt="one-page template"></a>
-                        <div class="weekly-products__info">
-                            <div class="weekly-products__name">
+                        <a class="weekly-products__link" href="#"><img class="weekly-products__image" src="images/slider-image-2.jpg" alt="one-page template"></a>
+                        <div class="weekly-products__info card-info">
+                            <div class="weekly-products__name card-name">
                                 One Page Resume Template
                             </div>
                             <div class="weekly-products__author author">
                                 <a class="weekly-products__avatar avatar" href="#" style="background-image: url(images/avatar.jpg);"></a>
                                 <a class="weekly-products__author-name author-name" href="#">AazTech</a>
-                                <a class="weekly-products__category category" href="#">WordPress</a>
+                                <a class="weekly-products__category category" href="#">
+                                    <span class="weekly-products__category-icon category-icon" style="background-image: url(images/icons/wordpress-icon.svg);"></span> WordPress
+                                </a>
                             </div>
-                            <p class="weekly-products__description">
+                            <p class="weekly-products__description card-text">
                                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
                             </p>
-                            <ul class="weekly-products__tags">
-                                <li class="weekly-products__tag">
-                                    <a class="weekly-products__tag-link" href="#">website</a>
+                            <ul class="weekly-products__tags card-tags">
+                                <li class="weekly-products__tag card-tag">
+                                    <a class="weekly-products__tag-link card-tag__link btn" href="#">website</a>
                                 </li>
-                                <li class="weekly-products__tag">
-                                    <a class="weekly-products__tag-link" href="#">plugin</a>
+                                <li class="weekly-products__tag card-tag">
+                                    <a class="weekly-products__tag-link card-tag__link btn" href="#">plugin</a>
                                 </li>
-                                <li class="weekly-products__tag">
-                                    <a class="weekly-products__tag-link" href="#">landing page</a>
+                                <li class="weekly-products__tag card-tag">
+                                    <a class="weekly-products__tag-link card-tag__link btn" href="#">landing page</a>
                                 </li>
+
+
                             </ul>
-                            <div class="weekly-products__rate">
-                                <a class="weekly-products__price" href="#">$10 - $50</a>
-                                <div class="weekly-products__likes likes">
+                            <div class="weekly-products__rate rate">
+                                <a class="weekly-products__price btn" href="#">$10 - $50</a>
+                                <button class="weekly-products__likes likes">
                                     <svg class="lnr lnr-heart"><use xlink:href="#lnr-heart"></use></svg> 46
-                                </div>
-                                <div class="weekly-products__purchases purchases">
+                                </button>
+                                <button class="weekly-products__purchases purchases">
                                     <svg class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use></svg> 634
-                                </div>
-                                <div class="weekly-products__stars">
-                                    <div class="weekly-products__star" style="background-image: url(images/icons/star.png);"></div>
-                                    <div class="weekly-products__star" style="background-image: url(images/icons/star.png);"></div>
-                                    <div class="weekly-products__star" style="background-image: url(images/icons/star.png);"></div>
-                                    <div class="weekly-products__star" style="background-image: url(images/icons/star.png);"></div>
-                                    <div class="weekly-products__star" style="background-image: url(images/icons/star_half.png);"></div>
-                                </div>
+                                </button>
+                                <div class="weekly-products__stars stars"></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="weekly-products__item">
-                        <a class="weekly__products__link" href="#"><img class="weekly-products__image" src="images/slider-image-1.jpg" alt="one-page template"></a>
-                        <div class="weekly-products__info">
-                            <div class="weekly-products__name">
+                        <a class="weekly-products__link" href="#"><img class="weekly-products__image" src="images/slider-image-1.jpg" alt="one-page template"></a>
+                        <div class="weekly-products__info card-info">
+                            <div class="weekly-products__name card-name">
                                 One Page Resume Template
                             </div>
-                            <div class="weekly-products__author">
-                                <a class="weekly-products__avatar" href="#" style="background-image: url(images/avatar.jpg);"></a>
-                                <a class="weekly-products__author-name" href="#">AazTech</a>
-                                <a class="weekly-products__category" href="#">WordPress</a>
+                            <div class="weekly-products__author author">
+                                <a class="weekly-products__avatar avatar" href="#" style="background-image: url(images/avatar.jpg);"></a>
+                                <a class="weekly-products__author-name author-name" href="#">AazTech</a>
+                                <a class="weekly-products__category category" href="#">
+                                    <span class="weekly-products__category-icon category-icon" style="background-image: url(images/icons/wordpress-icon.svg);"></span> WordPress
+                                </a>
                             </div>
-                            <p class="weekly-products__description">
+                            <p class="weekly-products__description card-text">
                                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
                             </p>
-                            <ul class="weekly-products__tags">
-                                <li class="weekly-products__tag">
-                                    <a class="weekly-products__tag-link" href="#">website</a>
+                            <ul class="weekly-products__tags card-tags">
+                                <li class="weekly-products__tag card-tag">
+                                    <a class="weekly-products__tag-link card-tag__link btn" href="#">website</a>
                                 </li>
-                                <li class="weekly-products__tag">
-                                    <a class="weekly-products__tag-link" href="#">plugin</a>
+                                <li class="weekly-products__tag card-tag">
+                                    <a class="weekly-products__tag-link card-tag__link btn" href="#">plugin</a>
                                 </li>
-                                <li class="weekly-products__tag">
-                                    <a class="weekly-products__tag-link" href="#">landing page</a>
+                                <li class="weekly-products__tag card-tag">
+                                    <a class="weekly-products__tag-link card-tag__link btn" href="#">landing page</a>
                                 </li>
                             </ul>
-                            <div class="weekly-products__rate">
+                            <div class="weekly-products__rate rate">
                                 <a class="weekly-products__price" href="#">$10 - $50</a>
-                                <div class="weekly-products__likes likes">
+                                <button class="weekly-products__likes likes">
                                     <svg class="lnr lnr-heart"><use xlink:href="#lnr-heart"></use></svg> 46
-                                </div>
-                                <div class="weekly-products__purchases purchases">
+                                </button>
+                                <button class="weekly-products__purchases purchases">
                                     <svg class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use></svg> 634
-                                </div>
-                                <div class="weekly-products__stars">
-                                    <div class="weekly-products__star" style="background-image: url(images/icons/star.png);"></div>
-                                    <div class="weekly-products__star" style="background-image: url(images/icons/star.png);"></div>
-                                    <div class="weekly-products__star" style="background-image: url(images/icons/star.png);"></div>
-                                    <div class="weekly-products__star" style="background-image: url(images/icons/star.png);"></div>
-                                    <div class="weekly-products__star" style="background-image: url(images/icons/star_half.png);"></div>
-                                </div>
+                                </button>
+                                <div class="weekly-products__stars stars"></div>
                             </div>
                         </div>
                     </div>
@@ -253,26 +253,26 @@
             <div class="container">
                 <div class="newest-products__inner">
                     <div class="newest-products__top">
-                        <div class="newest-products__title">Newest Release Products</div>
+                        <div class="newest-products__title title">Newest Release Products</div>
                         <div class="newest-products__sort">
-                            <button class="newest-products__filter-btn">
+                            <button type="button" class="newest-products__filter-btn">
                             Filter by
                             </button>
                             <ul class="newest-products__filter-list">
                                 <li class="newest-products__filter-item">
-                                    <button data-sort="default">Trending Items</button>
+                                    <button class="newest-products__sort-btn" type="button" data-sort="default">Trending Items</button>
                                 </li>
                                 <li class="newest-products__filter-item">
-                                    <button data-sort="sell:asc">Best seller</button>
+                                    <button class="newest-products__sort-btn" type="button" data-sort="sell:asc">Best seller</button>
                                 </li>
                                 <li class="newest-products__filter-item">
-                                    <button data-sort="rate:asc">Best rating</button>
+                                    <button class="newest-products__sort-btn" type="button" data-sort="rate:asc">Best rating</button>
                                 </li>
                                 <li class="newest-products__filter-item">
-                                    <button data-sort="price:asc">Low price</button>
+                                    <button class="newest-products__sort-btn" type="button" data-sort="price:asc">Low price</button>
                                 </li>
                                 <li class="newest-products__filter-item">
-                                    <button data-sort="price:desc">High price</button>
+                                    <button class="newest-products__sort-btn" type="button" data-sort="price:desc">High price</button>
                                 </li>
                             </ul>
                         </div>
@@ -281,6 +281,7 @@
                         <li class="newest-products__filters-item">
                             <button class="newest-products__btn" type="button" data-filter=".category-plugin">Plugins</button>
                         </li>
+
                         <li class="newest-products__filters-item">
                             <button class="newest-products__btn" type="button" data-filter=".category-wp">WordPress</button>
                         </li>
@@ -304,214 +305,214 @@
                         </li>
                     </ul>
                     <div class="newest-products__items">
-                        <div class="newest-products__item mix category-wp category-plugin" data-order="1" data-rate="1" data-sell="1" data-price="4">
-                            <div class="newest-products__image " style="background-image: url(images/products-image-1.jpg); " href="# ">
+                        <article class="newest-products__item mix category-wp category-plugin card" data-order="1" data-rate="1" data-sell="1" data-price="4">
+                            <div class="newest-products__card-top">
+                                <img class="newest-products__image" src="images/products-image-1.jpg" alt="">
                                 <div class="newest-products__image-buttons ">
-                                    <a href="# ">More Info</a>
-                                    <a href="# ">Live Demo</a>
+                                    <a class="newest-products__image-btn btn" href="# ">More Info</a>
+                                    <a class="newest-products__image-btn btn" href="# ">Live Demo</a>
                                 </div>
                             </div>
-                            <div class="newest-products__info ">
-                                <div class="newest-products__name ">
+                            <div class="newest-products__info card-info">
+                                <div class="newest-products__name card-name">
                                     E-commerce Shopping Cart
                                 </div>
-                                <div class="newest-products__author author ">
+                                <div class="newest-products__author author">
                                     <a class="newest-products__avatar avatar " href="# " style="background-image: url(images/avatar.jpg); "></a>
                                     <a class="newest-products__author-name author-name " href="# ">Theme-Valley</a>
-                                    <a class="newest-products__category newest-products__category--wp category " href="# ">Plugin</a>
+                                    <a class="newest-products__category newest-products__category--wp category " href="# ">
+                                        <span class="weekly-products__category-icon category-icon" style="background-image: url(images/icons/wordpress-icon.svg);"></span> Plugin
+                                    </a>
                                 </div>
-                                <div class="newest-products__text ">
+                                <div class="newest-products__text card-text">
                                     Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
                                 </div>
-                                <div class="newest-products__rate ">
-                                    <div class="newest-products__price " href="# ">$20</div>
-                                    <div class="newest-products__likes likes ">
+                                <div class="newest-products__rate rate">
+                                    <div class="newest-products__price price" href="# ">$20</div>
+                                    <button class="newest-products__likes likes ">
                                         <svg class="lnr lnr-heart "><use xlink:href="#lnr-heart "></use></svg> 90
-                                    </div>
-                                    <div class="newest-products__purchases purchases ">
+                                    </button>
+                                    <button class="newest-products__purchases purchases ">
                                         <svg class="lnr lnr-cart "><use xlink:href="#lnr-cart "></use></svg> 246
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="newest-products__item mix category-psd category-template" data-order="2" data-rate="5" data-sell="5" data-price="3">
-                            <div class="newest-products__image " style="background-image: url(images/products-image-2.jpg); " href="# ">
+                        <article class="newest-products__item mix category-psd category-template card" data-order="2" data-rate="5" data-sell="5" data-price="3">
+                            <div class="newest-products__card-top">
+                                <img class="newest-products__image" src="images/products-image-2.jpg" alt="">
                                 <div class="newest-products__image-buttons ">
-                                    <a href="# ">More Info</a>
-                                    <a href="# ">Live Demo</a>
+                                    <a class="newest-products__image-btn btn" href="# ">More Info</a>
+                                    <a class="newest-products__image-btn btn" href="# ">Live Demo</a>
                                 </div>
                             </div>
-                            <div class="newest-products__info ">
-                                <div class="newest-products__name ">
+                            <div class="newest-products__info card-info">
+                                <div class="newest-products__name card-name">
                                     Marketify Coffee Shop
                                 </div>
                                 <div class="newest-products__author author ">
                                     <a class="newest-products__avatar avatar " href="# " style="background-image: url(images/avatar.jpg); "></a>
                                     <a class="newest-products__author-name author-name " href="# ">EchoTheme</a>
-                                    <a class="newest-products__category newest-products__category--psd category " href="# ">PSD</a>
+                                    <a class="newest-products__category newest-products__category--psd category " href="# ">
+                                        <span class="weekly-products__category-icon category-icon" style="background-image: url(images/icons/psd-icon.svg);"></span> PSD
+                                    </a>
                                 </div>
-                                <div class="newest-products__text ">
+                                <div class="newest-products__text card-text ">
                                     Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
                                 </div>
-                                <div class="newest-products__rate ">
-                                    <div class="newest-products__price " href="# ">$18</div>
-                                    <div class="newest-products__likes likes ">
+                                <div class="newest-products__rate rate">
+                                    <div class="newest-products__price price" href="# ">$18</div>
+                                    <button class="newest-products__likes likes ">
                                         <svg class="lnr lnr-heart "><use xlink:href="#lnr-heart "></use></svg> 48
-                                    </div>
-                                    <div class="newest-products__purchases purchases ">
+                                    </button>
+                                    <button class="newest-products__purchases purchases ">
                                         <svg class="lnr lnr-cart "><use xlink:href="#lnr-cart "></use></svg> 50
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="newest-products__item mix category-template" data-order="3" data-rate="3" data-sell="2" data-price="1">
-                            <div class="newest-products__image " style="background-image: url(images/products-image-1.jpg); " href="# ">
+                        <article class="newest-products__item mix category-template card" data-order="3" data-rate="3" data-sell="2" data-price="1">
+                            <div class="newest-products__card-top">
+                                <img class="newest-products__image" src="images/products-image-3.jpg" alt="">
                                 <div class="newest-products__image-buttons ">
-                                    <a href="# ">More Info</a>
-                                    <a href="# ">Live Demo</a>
+                                    <a class="newest-products__image-btn btn" href="# ">More Info</a>
+                                    <a class="newest-products__image-btn btn" href="# ">Live Demo</a>
                                 </div>
                             </div>
-                            <div class="newest-products__info ">
-                                <div class="newest-products__name ">
+                            <div class="newest-products__info card-info">
+                                <div class="newest-products__name card-name">
                                     Bryson - Portfolio Template
                                 </div>
                                 <div class="newest-products__author author ">
                                     <a class="newest-products__avatar avatar " href="# " style="background-image: url(images/avatar.jpg); "></a>
                                     <a class="newest-products__author-name author-name " href="# ">Artcorner</a>
-                                    <a class="newest-products__category newest-products__category--html category " href="# ">HTML</a>
+                                    <a class="newest-products__category newest-products__category--html category " href="# ">
+                                        <span class="weekly-products__category-icon category-icon" style="background-image: url(images/icons/html-icon.svg);"></span> HTML
+                                    </a>
                                 </div>
-                                <div class="newest-products__text ">
+                                <div class="newest-products__text card-text ">
                                     Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
                                 </div>
-                                <div class="newest-products__rate ">
-                                    <div class="newest-products__price " href="# ">$10</div>
-                                    <div class="newest-products__likes likes ">
+                                <div class="newest-products__rate rate">
+                                    <div class="newest-products__price price" href="# ">$10</div>
+                                    <button class="newest-products__likes likes ">
                                         <svg class="lnr lnr-heart "><use xlink:href="#lnr-heart "></use></svg> 56
-                                    </div>
-                                    <div class="newest-products__stars ">
-                                        <div class="weekly-products__star " style="background-image: url(images/icons/star.png); "></div>
-                                        <div class="weekly-products__star " style="background-image: url(images/icons/star.png); "></div>
-                                        <div class="weekly-products__star " style="background-image: url(images/icons/star.png); "></div>
-                                        <div class="weekly-products__star " style="background-image: url(images/icons/star.png); "></div>
-                                        <div class="weekly-products__star " style="background-image: url(images/icons/star_half.png); "></div>
-                                    </div>
-                                    <div class="newest-products__purchases purchases ">
+                                    </button>
+                                    <div class="newest-products__stars stars"></div>
+                                    <button class="newest-products__purchases purchases ">
                                         <svg class="lnr lnr-cart "><use xlink:href="#lnr-cart "></use></svg> 68
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="newest-products__item mix category-wp category-plugin" data-order="4" data-rate="2" data-sell="6" data-price="5">
-                            <div class="newest-products__image " style="background-image: url(images/products-image-2.jpg); " href="# ">
+                        <article class="newest-products__item mix category-wp category-plugin card" data-order="4" data-rate="2" data-sell="6" data-price="5">
+                            <div class="newest-products__card-top">
+                                <img class="newest-products__image" src="images/products-image-4.jpg" alt="">
                                 <div class="newest-products__image-buttons ">
-                                    <a href="# ">More Info</a>
-                                    <a href="# ">Live Demo</a>
+                                    <a class="newest-products__image-btn btn" href="# ">More Info</a>
+                                    <a class="newest-products__image-btn btn" href="# ">Live Demo</a>
                                 </div>
                             </div>
-                            <div class="newest-products__info ">
-                                <div class="newest-products__name ">
+                            <div class="newest-products__info card-info">
+                                <div class="newest-products__name card-name">
                                     E-commerce Shopping Cart
                                 </div>
                                 <div class="newest-products__author author ">
                                     <a class="newest-products__avatar avatar " href="# " style="background-image: url(images/avatar.jpg); "></a>
                                     <a class="newest-products__author-name author-name " href="# ">Design-Hub</a>
-                                    <a class="newest-products__category newest-products__category--wp category " href="# ">Plugin</a>
+                                    <a class="newest-products__category newest-products__category--wp category " href="# ">
+                                        <span class="weekly-products__category-icon category-icon" style="background-image: url(images/icons/wordpress-icon.svg);"></span> Plugin
+                                    </a>
                                 </div>
-                                <div class="newest-products__text ">
+                                <div class="newest-products__text card-text ">
                                     Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
                                 </div>
-                                <div class="newest-products__rate ">
-                                    <a class="newest-products__price newest-products__price--range " href="# ">$10 - $50</a>
-                                    <div class="newest-products__likes likes ">
+                                <div class="newest-products__rate rate">
+                                    <a class="newest-products__price newest-products__price--range price" href="# ">$10 - $50</a>
+                                    <button class="newest-products__likes likes ">
                                         <svg class="lnr lnr-heart "><use xlink:href="#lnr-heart "></use></svg> 90
-                                    </div>
-                                    <div class="newest-products__stars ">
-                                        <div class="weekly-products__star " style="background-image: url(images/icons/star.png); "></div>
-                                        <div class="weekly-products__star " style="background-image: url(images/icons/star.png); "></div>
-                                        <div class="weekly-products__star " style="background-image: url(images/icons/star.png); "></div>
-                                        <div class="weekly-products__star " style="background-image: url(images/icons/star.png); "></div>
-                                        <div class="weekly-products__star " style="background-image: url(images/icons/star_half.png); "></div>
-                                    </div>
-                                    <div class="newest-products__purchases purchases ">
+                                    </button>
+                                    <div class="newest-products__stars stars"></div>
+                                    <button class="newest-products__purchases purchases">
                                         <svg class="lnr lnr-cart "><use xlink:href="#lnr-cart "></use></svg> 45
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="newest-products__item mix category-psd category-template" data-order="5" data-rate="6" data-sell="4" data-price="6">
-                            <div class="newest-products__image " style="background-image: url(images/products-image-1.jpg); " href="# ">
+                        <article class="newest-products__item mix category-psd category-template card" data-order="5" data-rate="6" data-sell="4" data-price="6">
+                            <div class="newest-products__card-top">
+                                <img class="newest-products__image" src="images/products-image-5.jpg" alt="">
                                 <div class="newest-products__image-buttons ">
-                                    <a href="# ">More Info</a>
-                                    <a href="# ">Live Demo</a>
+                                    <a class="newest-products__image-btn btn" href="# ">More Info</a>
+                                    <a class="newest-products__image-btn btn" href="# ">Live Demo</a>
                                 </div>
                             </div>
-                            <div class="newest-products__info ">
-                                <div class="newest-products__name ">
+                            <div class="newest-products__info card-info">
+                                <div class="newest-products__name card-name">
                                     Marketify Coffee Shop
                                 </div>
                                 <div class="newest-products__author author ">
                                     <a class="newest-products__avatar avatar " href="# " style="background-image: url(images/avatar.jpg); "></a>
                                     <a class="newest-products__author-name author-name " href="# ">AazTech</a>
-                                    <a class="newest-products__category newest-products__category--psd category " href="# ">PSD</a>
+                                    <a class="newest-products__category newest-products__category--psd category " href="# ">
+                                        <span class="weekly-products__category-icon category-icon" style="background-image: url(images/icons/psd-icon.svg);"></span> PSD
+                                    </a>
                                 </div>
-                                <div class="newest-products__text ">
+                                <div class="newest-products__text card-text ">
                                     Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
                                 </div>
-                                <div class="newest-products__rate ">
-                                    <div class="newest-products__price newest-products__price--range " href="# ">$10 - $50</div>
-                                    <div class="newest-products__likes likes ">
+                                <div class="newest-products__rate rate">
+                                    <div class="newest-products__price newest-products__price--range price" href="# ">$10 - $50</div>
+                                    <button class="newest-products__likes likes ">
                                         <svg class="lnr lnr-heart "><use xlink:href="#lnr-heart "></use></svg> 48
-                                    </div>
-                                    <div class="newest-products__purchases purchases ">
+                                    </button>
+                                    <button class="newest-products__purchases purchases ">
                                         <svg class="lnr lnr-cart "><use xlink:href="#lnr-cart "></use></svg> 50
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="newest-products__item mix category-template" data-order="6" data-rate="4" data-sell="3" data-price="2">
-                            <div class="newest-products__image " style="background-image: url(images/products-image-2.jpg); " href="# ">
+                        <article class="newest-products__item mix category-template card" data-order="6" data-rate="4" data-sell="3" data-price="2">
+                            <div class="newest-products__card-top">
+                                <img class="newest-products__image" src="images/products-image-6.jpg" alt="">
                                 <div class="newest-products__image-buttons ">
-                                    <a href="# ">More Info</a>
-                                    <a href="# ">Live Demo</a>
+                                    <a class="newest-products__image-btn btn" href="# ">More Info</a>
+                                    <a class="newest-products__image-btn btn" href="# ">Live Demo</a>
                                 </div>
                             </div>
-                            <div class="newest-products__info ">
-                                <div class="newest-products__name ">
+                            <div class="newest-products__info card-info">
+                                <div class="newest-products__name card-name">
                                     Bryson - Portfolio Template
                                 </div>
                                 <div class="newest-products__author author ">
                                     <a class="newest-products__avatar avatar " href="# " style="background-image: url(images/avatar.jpg); "></a>
                                     <a class="newest-products__author-name author-name " href="# ">Coder-Lab</a>
-                                    <a class="newest-products__category newest-products__category--html category " href="# ">HTML</a>
+                                    <a class="newest-products__category newest-products__category--html category " href="# ">
+                                        <span class="weekly-products__category-icon category-icon" style="background-image: url(images/icons/html-icon.svg);"></span> HTML
+                                    </a>
                                 </div>
-                                <div class="newest-products__text ">
+                                <div class="newest-products__text card-text ">
                                     Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam aliquet congue.
                                 </div>
-                                <div class="newest-products__rate ">
-                                    <div class="newest-products__price " href="# ">$10</div>
-                                    <div class="newest-products__likes likes ">
+                                <div class="newest-products__rate rate">
+                                    <div class="newest-products__price price" href="# ">$10</div>
+                                    <button class="newest-products__likes likes ">
                                         <svg class="lnr lnr-heart "><use xlink:href="#lnr-heart "></use></svg> 56
-                                    </div>
-                                    <div class="newest-products__stars ">
-                                        <div class="weekly-products__star " style="background-image: url(images/icons/star.png); "></div>
-                                        <div class="weekly-products__star " style="background-image: url(images/icons/star.png); "></div>
-                                        <div class="weekly-products__star " style="background-image: url(images/icons/star.png); "></div>
-                                        <div class="weekly-products__star " style="background-image: url(images/icons/star.png); "></div>
-                                        <div class="weekly-products__star " style="background-image: url(images/icons/star_half.png); "></div>
-                                    </div>
-                                    <div class="newest-products__purchases purchases ">
+                                    </button>
+                                    <div class="newest-products__stars stars"></div>
+                                    <button class="newest-products__purchases purchases ">
                                         <svg class="lnr lnr-cart "><use xlink:href="#lnr-cart "></use></svg> 68
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
-                        </div>
+                        </article>
                     </div>
-                    <button class="newest-products__all-btn " type="button" data-filter="all">All New Products</button>
+                    <button class="newest-products__all-btn btn" type="button" data-filter="all">All New Products</button>
                 </div>
             </div>
         </section>
