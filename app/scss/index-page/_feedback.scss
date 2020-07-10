@@ -1,0 +1,104 @@
+.feedback {
+    padding: 120px 0;
+    background-color: #fff;
+    text-align: center;
+    &__title {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 36px;
+        color: #000;
+        span {
+            color: $blue;
+        }
+    }
+    &__text {
+        max-width: 720px;
+        text-align: center;
+        margin: 0 auto 55px;
+    }
+    &__inner {
+        box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+        background-color: transparent;
+        margin-bottom: 50px;
+        position: relative;
+    }
+    &__item {
+        max-width: 555px;
+        padding: 50px 38px;
+        border-left: 2px solid $blue;
+        border-radius: 4px;
+        transition: all .3s;
+        text-align: left;
+        box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+        margin-right: 30px;
+    }
+    &__user {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    &__avatar {
+        width: 80px;
+        height: 80px;
+        margin-right: 19px;
+    }
+    &__user-name {
+        font-size: 20px;
+        color: #000;
+    }
+    &__link {
+        font-size: 0;
+        margin-left: auto;
+        width: 57px;
+        height: 51px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all .3s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &__link-all {
+        background-color: $blue;
+        color: #fff;
+        padding: 13px 33px;
+        border-radius: 27px;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &:active {
+            box-shadow: inset 7px 7px 7px 7px rgba(0, 0, 0, 0.3);
+        }
+    }
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        border: none;
+        background-color: #fff;
+        box-shadow: 0px 4px 15px 0px rgba(67, 67, 67, 0.15);
+        width: 52px;
+        height: 52px;
+        cursor: pointer;
+        outline: transparent;
+        transition: all .3s;
+        svg {
+            transition: all .3s;
+        }
+        &:hover svg {
+            stroke: $blue;
+        }
+        &:active {
+            box-shadow: inset 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
+        }
+        &--prev {
+            left: -25px;
+        }
+        &--next {
+            right: -25px;
+        }
+    }
+}
