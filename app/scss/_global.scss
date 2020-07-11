@@ -21,7 +21,10 @@ a {
 .newest-products__filters,
 .greeting__text,
 .card-text,
-.offer__text {
+.offer__text,
+.footer__list,
+.footer__social {
+    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -40,14 +43,6 @@ body {
     color: $text;
 }
 
-.lnr {
-    width: 1em;
-    height: 1em;
-    font-size: 18px;
-    fill: currentColor;
-    transition: all .3s;
-}
-
 .lnr-chevron-right,
 .lnr-chevron-left {
     color: #fff;
@@ -59,6 +54,7 @@ body {
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
     outline: transparent;
     transition: all .3s;
+    cursor: pointer;
     position: relative;
     &::before {
         content: "";
@@ -174,31 +170,45 @@ body {
     background-color: #e6f1fd;
 }
 
-.likes,
-.purchases {
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    border: none;
-    outline: transparent;
-    cursor: pointer;
-    padding: 0;
-    .lnr {
-        margin-right: 8px;
+.likes {
+    &::before {
+        content: "\e813";
+        font-family: 'Linearicons-Free';
         font-size: 15px;
+        color: $pink;
+        transition: all .3s;
+        position: absolute;
+        left: 0;
     }
-    .lnr-heart {
+    &:hover {
         color: $pink;
     }
-    .lnr-cart {
+}
+
+.purchases {
+    &::before {
+        content: "\e82e";
+        font-family: 'Linearicons-Free';
+        font-size: 15px;
+        color: $blue;
+        transition: all .3s;
+        position: absolute;
+        left: 0;
+    }
+    &:hover {
         color: $blue;
     }
 }
 
-.likes {
-    color: $pink;
-}
-
+.likes,
 .purchases {
-    color: $blue;
+    padding-left: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    outline: transparent;
+    cursor: pointer;
+    transition: all .3s;
 }

@@ -72,6 +72,9 @@
         }
     }
     .slick-arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         top: 50%;
         z-index: 5;

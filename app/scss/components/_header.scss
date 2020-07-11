@@ -17,7 +17,7 @@
         display: flex;
     }
     &__btn {
-        margin-right: 53px;
+        margin-right: 48px;
         padding: 4px 18px;
         font-size: 14px;
         line-height: 28px;
@@ -27,7 +27,6 @@
     }
     &__icons,
     &__list {
-        list-style: none;
         display: flex;
         align-items: center;
     }
@@ -40,36 +39,50 @@
     &__icon {
         font-size: 0;
         position: relative;
+        &::before {
+            font-family: 'Linearicons-Free';
+            font-size: 20px;
+            color: #7e8fa1;
+            transition: all .3s;
+        }
         span {
             position: absolute;
-            top: -23px;
+            top: -18px;
             right: -15px;
             width: 27px;
             height: 27px;
             font-size: 14px;
             color: #fff;
-            text-align: center;
             border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         &--alarm {
+            &::before {
+                content: "\e858";
+            }
+            &:hover::before {
+                color: #ff6a6c;
+            }
+            &:focus::before {
+                color: #ff6a6c;
+            }
             span {
                 background-color: #ff6a6c;
-            }
-            &:hover .lnr {
-                color: #ff6a6c;
-            }
-            &:focus .lnr {
-                color: #ff6a6c;
             }
         }
         &--envelope {
             span {
                 background-color: #62d03b;
             }
-            &:hover .lnr {
+            &::before {
+                content: "\e818";
+            }
+            &:hover::before {
                 color: #62d03b;
             }
-            &:focus .lnr {
+            &:focus::before {
                 color: #62d03b;
             }
         }
@@ -77,16 +90,16 @@
             span {
                 background-color: #0674ec;
             }
-            &:hover .lnr {
+            &::before {
+                content: "\e82e";
+            }
+            &:hover::before {
                 color: #0674ec;
             }
-            &:focus .lnr {
+            &:focus::before {
                 color: #0674ec;
             }
         }
-    }
-    .lnr {
-        color: #7e8fa1;
     }
     &__user {
         display: flex;
@@ -173,13 +186,24 @@
         position: absolute;
         top: 0;
         right: 0;
-        padding: 14px 27px;
+        // padding: 14px 27px;
+        padding: 23px 35px;
         border-radius: 23px;
         background-color: $blue;
         font-size: 0;
         border: none;
         outline: transparent;
         cursor: pointer;
+        &::before {
+            position: absolute;
+            top: 13px;
+            content: "\e86f";
+            font-family: 'Linearicons-Free';
+            font-size: 15px;
+            color: #fff;
+            transition: all .3s;
+            border: none;
+        }
     }
     .lnr-magnifier {
         color: #fff;

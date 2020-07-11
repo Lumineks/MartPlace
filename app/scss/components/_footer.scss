@@ -1,0 +1,202 @@
+.footer {
+    &__top {
+        padding: 110px 115px;
+        background-color: #262b30;
+        line-height: 26px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        max-width: 180px;
+        width: 100%;
+        font-size: 15px;
+        color: #ababab;
+        &--info {
+            max-width: 295px;
+            padding-right: 15px;
+            .footer__content {
+                margin-top: 18px;
+            }
+            margin-right: 25px;
+        }
+        &--company {
+            margin-right: 55px;
+        }
+        &--newsletter {
+            max-width: 360px;
+        }
+    }
+    &__content {
+        margin-top: 30px;
+    }
+    &__title {
+        margin-top: 15px;
+        font-size: 18px;
+        color: #fff;
+    }
+    &__text {
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+    &__link {
+        padding-left: 30px;
+        margin-bottom: 10px;
+        transition: all .3s;
+        position: relative;
+        &:hover {
+            color: #fff;
+        }
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: 'Linearicons-Free';
+            font-size: 16px;
+            color: #fff;
+        }
+        &--phone {
+            &::before {
+                content: "\e830";
+            }
+        }
+        &--email {
+            &::before {
+                content: "\e818";
+            }
+        }
+    }
+    &__address {
+        padding-left: 30px;
+        position: relative;
+        &::before {
+            content: "\e833";
+            position: absolute;
+            top: 12px;
+            left: 0;
+            font-family: 'Linearicons-Free';
+            font-size: 16px;
+            color: #fff;
+        }
+    }
+    &__list-item {
+        transition: all .3s;
+        &:hover {
+            color: #fff;
+        }
+        &+& {
+            margin-top: 6px;
+        }
+    }
+    &__form {
+        position: relative;
+        margin-top: 35px;
+        margin-bottom: 45px;
+    }
+    &__input {
+        width: 100%;
+        height: 50px;
+        padding-left: 30px;
+        padding-right: 115px;
+        border-radius: 25px;
+        outline: transparent;
+        font-size: 15px;
+        color: #000;
+        &::placeholder {
+            font-size: 15px;
+            color: #ababab;
+        }
+    }
+    &__btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 16px 31px;
+        background-color: $blue;
+        border-radius: 25px;
+        border: none;
+        &:hover {
+            opacity: .8;
+        }
+        &:active {
+            box-shadow: inset 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+        }
+    }
+    &__social-item {
+        display: inline-block;
+        &+& {
+            margin-left: 10px;
+        }
+    }
+    &__social-link {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        position: relative;
+        transition: all .3s;
+        &:hover {
+            transform: scale(1.2);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            top: 50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 18px;
+            height: 18px;
+        }
+        &--facebook {
+            background-color: #395799;
+            &::before {
+                background-image: url(../images/icons/facebook.svg);
+            }
+        }
+        &--twitter {
+            background-color: #19b2f5;
+            &::before {
+                background-image: url(../images/icons/twitter.svg);
+            }
+        }
+        &--google {
+            background-color: #f05b44;
+            &::before {
+                background-image: url(../images/icons/google.svg);
+            }
+        }
+        &--pinterest {
+            background-color: #9c0c1c;
+            &::before {
+                background-image: url(../images/icons/pinterest-p.svg);
+            }
+        }
+        &--linkedin {
+            background-color: #0da6be;
+            &::before {
+                background-image: url(../images/icons/twitter.svg);
+            }
+        }
+        &--dribble {
+            background-color: #ea4c89;
+            &::before {
+                background-image: url(../images/icons/google.svg);
+            }
+        }
+    }
+    &__copy {
+        padding: 40px 0 35px;
+        background-color: #192027;
+        text-align: center;
+        font-size: 15px;
+        color: #999999;
+        span {
+            color: #fff;
+        }
+    }
+}

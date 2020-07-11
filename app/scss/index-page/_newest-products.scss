@@ -134,12 +134,11 @@
     }
     &__items {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
     }
     &__item {
         max-width: 360px;
-        margin-bottom: 30px;
+        margin: 0 auto 30px;
     }
     &__card-top {
         position: relative;
