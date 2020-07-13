@@ -4,7 +4,7 @@
     text-align: center;
     &__title {
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 26px;
         font-size: 36px;
         color: #000;
         span {
@@ -19,12 +19,12 @@
     &__inner {
         box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
         background-color: transparent;
-        margin-bottom: 50px;
+        margin-bottom: 58px;
         position: relative;
     }
     &__item {
         max-width: 555px;
-        padding: 50px 38px;
+        padding: 50px 38px 45px;
         border-left: 2px solid $blue;
         border-radius: 4px;
         transition: all .3s;
@@ -35,7 +35,7 @@
     &__user {
         display: flex;
         align-items: center;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
     &__avatar {
         width: 80px;

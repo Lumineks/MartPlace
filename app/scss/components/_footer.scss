@@ -19,17 +19,17 @@
             .footer__content {
                 margin-top: 18px;
             }
-            margin-right: 25px;
+            margin-right: 32px;
         }
         &--company {
-            margin-right: 55px;
+            margin-right: 51px;
         }
         &--newsletter {
             max-width: 360px;
         }
     }
     &__content {
-        margin-top: 30px;
+        margin-top: 24px;
     }
     &__title {
         margin-top: 15px;
@@ -37,8 +37,8 @@
         color: #fff;
     }
     &__text {
-        margin-top: 25px;
-        margin-bottom: 20px;
+        margin-top: 21px;
+        margin-bottom: 19px;
     }
     &__link {
         padding-left: 30px;
@@ -91,8 +91,8 @@
     }
     &__form {
         position: relative;
-        margin-top: 35px;
-        margin-bottom: 45px;
+        margin-top: 34px;
+        margin-bottom: 47px;
     }
     &__input {
         width: 100%;
@@ -126,7 +126,7 @@
     &__social-item {
         display: inline-block;
         &+& {
-            margin-left: 10px;
+            margin-left: 9px;
         }
     }
     &__social-link {
@@ -179,7 +179,7 @@
         &--linkedin {
             background-color: #0da6be;
             &::before {
-                background-image: url(../images/icons/twitter.svg);
+                background-image: url(../images/icons/linkedin.svg);
             }
         }
         &--dribble {

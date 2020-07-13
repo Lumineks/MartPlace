@@ -26,7 +26,7 @@ $(function() {
         variableWidth: true,
     });
 
-    var mixer = mixitup('.newest-products__items');
+
 
     $('.greeting__list').on('click', function() {
         $('.greeting__list').toggleClass('active')
@@ -34,8 +34,9 @@ $(function() {
 
     $(".stars").rateYo({
         rating: 4.5,
-        starWidth: "16px",
+        starWidth: "17px",
         readOnly: true,
         ratedFill: "#ffc000"
     });
+    var mixer = mixitup('.newest-products__items');
 });

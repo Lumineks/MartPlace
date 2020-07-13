@@ -8,18 +8,24 @@
     &__item {
         max-width: 180px;
         text-align: center;
+        &+& {
+            margin-left: 231px;
+        }
+        &:last-child {
+            margin-left: 211px;
+        }
     }
     &__icon {
         width: 50px;
         height: 50px;
-        margin: 0 auto 35px;
+        margin: 0 auto 49px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
     }
     &__number {
         font-size: 36px;
-        margin-bottom: 15px;
+        margin-bottom: 9px;
         &--1 {
             color: #feb71d;
         }
