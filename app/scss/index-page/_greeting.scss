@@ -83,6 +83,7 @@
         border: 1px solid #c0e6df;
         transition: all .3s;
         outline: transparent;
+        border-radius: 4px 0 0 4px;
         &::placeholder {
             font-weight: 400;
             font-size: 16px;
@@ -105,6 +106,7 @@
         height: 55px;
         border: 1px solid #dcdcdc;
         border-left-color: transparent;
+        border-radius: 0 4px 4px 0;
         transition: all .3s;
         cursor: pointer;
         outline: transparent;
