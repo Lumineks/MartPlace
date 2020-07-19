@@ -2,4 +2,12 @@ $text: #555555;
 $gray: #676767;
 $blue: #0674ec;
 $pink: #7347c1;
+$red: #ff6a6c;
+$green: #62d03a;
 $bg-blue: #2b4ed0;
+
+@mixin reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

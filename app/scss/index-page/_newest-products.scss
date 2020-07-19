@@ -1,25 +1,21 @@
 .newest-products {
     padding: 133px 0;
     background-color: #f6f7fb;
+
     &__top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 30px;
-        height: 110px;
         margin-bottom: 30px;
-        border-radius: 4px;
-        box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
-        background-color: #fff;
     }
+
     &__sort {
         position: relative;
         padding: 20px 0;
+
         &:hover .newest-products__filter-list {
             visibility: visible;
             opacity: 1;
         }
     }
+
     &__filter-btn {
         padding-right: 30px;
         background-color: transparent;
@@ -29,6 +25,7 @@
         cursor: pointer;
         transition: all .3s;
         outline: transparent;
+
         &::after {
             content: "";
             position: absolute;
@@ -38,15 +35,19 @@
             height: 20px;
             background-image: url(../images/icons/filter-btn.svg);
         }
+
         &:hover,
         &:focus {
             color: #000;
         }
+
         &:active {
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
         }
     }
+
     &__filter-list {
+        @include reset;
         position: absolute;
         top: 60px;
         right: -18px;
@@ -60,6 +61,7 @@
         min-width: 170px;
         padding: 20px 25px;
         background-color: #fff;
+
         .newest-products__sort-btn {
             background-color: transparent;
             border: none;
@@ -70,16 +72,20 @@
             cursor: pointer;
             white-space: nowrap;
             transition: all .3s;
+
             &:hover {
                 color: $blue;
             }
+
             &:active {
                 text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
             }
+
             &.mixitup-control-active {
                 color: $blue;
             }
         }
+
         &::before {
             content: "";
             position: absolute;
@@ -92,7 +98,9 @@
             border-color: transparent transparent #fff transparent;
         }
     }
+
     &__filters {
+        @include reset;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -105,178 +113,108 @@
         background-color: #fff;
         box-shadow: 0px 1px 2px 0px rgba(90, 93, 100, 0.1);
         border-radius: 4px;
+
         .mixitup-control-active {
             background-color: $blue;
             color: #fff;
         }
     }
+
     &__filters-item {
         margin: 10px 0;
+
         &+& {
             margin-left: 7px;
         }
     }
+
     &__btn {
         padding: 7px 18px;
-        outline: transparent;
         border: none;
         border-radius: 16px;
         color: #747b86;
         background-color: #f1f3f6;
-        cursor: pointer;
-        transition: all .3s;
+        box-shadow: none;
+
         &:hover {
             background-color: $blue;
             color: #fff;
         }
+
         &:active {
             box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.66);
         }
     }
+
     &__items {
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
         margin-right: -30px;
     }
+
     &__item {
         max-width: calc(100% / 3 - 30px);
         margin-right: 30px;
         margin-bottom: 30px;
     }
-    &__card-top {
-        position: relative;
-        height: 230px;
-        border-radius: 4px;
-    }
-    &__image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 4px;
-    }
-    &__image-buttons {
-        display: flex;
-        padding-left: 48px;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 5;
-        width: 100%;
-        height: 100%;
-        border-radius: 4px;
-        background: linear-gradient( 180deg, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%) !important;
-        opacity: 0.902;
-        z-index: 5;
-        opacity: 0;
-        transition: all .5s;
-        &:hover {
-            opacity: 1;
-        }
-    }
-    &__image-btn {
-        padding: 5px 26px;
-        background-color: transparent;
-        color: #fff;
-        font-weight: 500;
-        border: 1px solid #fff;
-        border-radius: 23px;
-        transition: all .5s;
-        &:hover {
-            background-color: #fff;
-            color: $blue;
-        }
-        &+& {
-            margin-left: 9px;
-        }
-    }
+
     &__info {
         padding: 24px 28px 0;
     }
+
     &__text {
         max-height: 90px;
     }
+
     &__name {
         margin-bottom: 10px;
         font-size: 20px;
         max-height: 30px;
         overflow: hidden;
     }
+
     &__author {
         margin-bottom: 26px;
     }
-    &__avatar {
-        margin-right: 6px;
-    }
+
     &__author-name {
-        margin-right: 18px;
+        margin-right: 16px;
+        padding-left: 38px;
     }
+
     &__category {
         padding-left: 25px;
-        &--wp {
-            span {
-                top: 7px;
-                width: 16px;
-                height: 16px;
-            }
-        }
-        &--psd {
-            span {
-                top: 7px;
-                width: 13px;
-                height: 17px;
-            }
-        }
-        &--html {
-            span {
-                top: 7px;
-                width: 17px;
-                height: 17px;
-            }
-        }
     }
+
     &__text {
         margin-bottom: 30px;
     }
+
     &__rate {
         height: 60px;
-        border-top: 1px solid #ececec;
         position: relative;
-        &::after,
-        &::before {
-            content: "";
-            position: absolute;
-            width: 30px;
-            height: 1px;
-            background-color: #ececec;
-            top: 0;
-        }
-        &::after {
-            left: -30px;
-        }
-        &::before {
-            right: -30px;
-        }
     }
+
     &__price {
         margin-right: 18px;
+
         &--range {
             padding: 0 13px;
         }
     }
+
     &__stars {
         margin-left: 15px;
     }
+
     &__purchases {
         margin-left: auto;
     }
+
     &__all-btn {
         display: block;
-        margin: 27px auto 0;
+        margin: 23px auto 0;
         padding: 19px 33px;
         border: none;
         border-radius: 29px;
@@ -285,13 +223,16 @@
         cursor: pointer;
         background-color: #fff;
         transition: all .3s;
+
         &:hover {
             background-color: $blue;
             color: #fff;
         }
+
         &:active {
             box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.66);
         }
+
         &.mixitup-control-active {
             background-color: $blue;
             color: #fff;
