@@ -3,15 +3,8 @@
     background-color: #fff;
     text-align: center;
 
-    &__title {
-        text-align: center;
-        margin-bottom: 26px;
-        font-size: 36px;
-        color: #000;
-
-        span {
-            color: $blue;
-        }
+    &__title {       
+        margin-bottom: 26px;       
     }
 
     &__text {

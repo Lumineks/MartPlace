@@ -1,31 +1,32 @@
 .banner {
     background-color: #000;
-    // background-image: url(../images/banner-bg.jpg);
-    background-image: linear-gradient( 270deg, rgb(13,62,242) 0%, rgb(64,48,201) 46%, rgb(114,33,160) 100%);
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: center;
+    background-image: linear-gradient(270deg, rgb(13, 62, 242) 0%, rgb(64, 48, 201) 46%, rgb(114, 33, 160) 100%);
     padding: 114px 0 110px;
     text-align: center;
+
     &__title {
         font-size: 36px;
         color: #fff;
         margin-bottom: 20px;
     }
+
     &__text {
         font-size: 18px;
         color: #fff;
         margin-bottom: 45px;
     }
+
     &__link {
         color: $blue;
         padding: 12px 43px;
         border-radius: 26px;
         background-color: #fff;
         transition: all .3s;
+
         &:hover {
             transform: scale(1.1);
         }
+
         &:active {
             box-shadow: inset 7px 7px 7px 7px rgba(0, 0, 0, 0.3);
         }

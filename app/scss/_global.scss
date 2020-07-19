@@ -10,7 +10,7 @@ html {
 }
 
 a {
-   
+
     text-decoration: none;
     color: inherit;
 }
@@ -122,8 +122,19 @@ body {
     color: #000;
 }
 
+.title-promo {
+    font-size: 36px;
+    color: #000;
+    text-align: center;
+
+    span {
+        color: $blue;
+    }
+}
+
 .card {
     position: relative;
+
     &::after {
         content: "";
         position: absolute;
@@ -132,6 +143,7 @@ body {
         background-color: #ececec;
         bottom: 60px;
     }
+
     &__top {
         position: relative;
         height: 230px;
@@ -150,8 +162,8 @@ body {
 
     &__top-buttons {
         display: flex;
-        padding-left: 48px;
         align-items: center;
+        justify-content: center;
         position: absolute;
         top: 0;
         left: 0;
@@ -171,7 +183,7 @@ body {
     }
 
     &__top-btn {
-       
+
         padding: 5px 26px;
         background-color: transparent;
         color: #fff;
@@ -212,7 +224,6 @@ body {
         overflow-x: auto;
 
         &::-webkit-scrollbar {
-            width: 5px;
             height: 5px;
             background-color: rgba(0, 0, 0, 0.1);
         }
@@ -240,6 +251,7 @@ body {
         @include reset;
         overflow: auto;
         min-height: 90px;
+
         &::-webkit-scrollbar {
             width: 5px;
             background-color: rgba(0, 0, 0, 0.1);

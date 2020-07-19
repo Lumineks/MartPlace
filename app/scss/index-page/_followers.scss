@@ -4,7 +4,9 @@
     &__top {
         margin-bottom: 50px;
     }
-
+    &__inner {
+        
+    }
     .slick-arrow {
         background-color: $blue;
 
@@ -96,6 +98,7 @@
 
     &__author-name {
         margin-right: 20px;
+        padding-left: 36px;
     }
 
     &__category {
@@ -108,7 +111,7 @@
 
     &__rate {
         height: 60px;
-        border-top: 1px solid #ececec;
+       
         position: relative;
     }
 

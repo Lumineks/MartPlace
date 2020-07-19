@@ -2,12 +2,7 @@
     padding: 120px 0 91px;
     text-align: center;
     &__title {
-        margin-bottom: 25px;
-        font-size: 36px;
-        color: #000;
-        span {
-            color: $blue;
-        }
+        margin-bottom: 25px;        
     }
     &__description {
         max-width: 720px;
