@@ -9,6 +9,12 @@ html {
     box-sizing: inherit;
 }
 
+html,
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
 a {
 
     text-decoration: none;
@@ -57,6 +63,11 @@ body {
     border-radius: 4px;
     box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
     background-color: #fff;
+
+    @include r(768) {
+        height: 70px;
+        padding: 0 15px;
+    }
 }
 
 .arrows-main {
@@ -79,6 +90,16 @@ body {
         }
     }
 
+    @include r(768) {
+        .slick-arrow {
+            width: 50px;
+            height: 36px;
+        }
+    }
+
+    @include r(500) {
+        display: none;
+    }
 }
 
 .btn {
@@ -120,6 +141,10 @@ body {
     font-size: 30px;
     line-height: 36px;
     color: #000;
+
+    @include r(768) {
+        font-size: 20px;
+    }
 }
 
 .title-promo {
@@ -129,6 +154,14 @@ body {
 
     span {
         color: $blue;
+    }
+
+    @include r(768) {
+        font-size: 30px;
+    }
+
+    @include r(380) {
+        font-size: 26px;
     }
 }
 
@@ -149,6 +182,7 @@ body {
         height: 230px;
         border-radius: 4px 4px 0 0;
     }
+
 
     &__image {
         position: absolute;
@@ -263,6 +297,12 @@ body {
             cursor: pointer;
         }
     }
+
+    @include r(768) {
+        &::after {
+            bottom: 80px;
+        }
+    }
 }
 
 
@@ -333,15 +373,31 @@ body {
         top: 0;
 
     }
+
+    @include r(768) {
+        flex-wrap: wrap;
+        align-items: center;
+        height: 80px;
+    }
+
+    @include r(500) {
+        justify-content: space-between;
+    }
+
 }
 
 .price {
+    display: inline-block;
     font-weight: 500;
     font-size: 15px;
     color: $blue;
     padding: 0 17px;
     border-radius: 15px;
     background-color: #e6f1fd;
+
+    @include r(768) {
+        order: 1;
+    }
 }
 
 .likes,
@@ -374,6 +430,15 @@ body {
     &:hover {
         color: $pink;
     }
+
+    @include r(768) {
+        order: 2;
+    }
+
+    @include r(500) {
+        margin-left: auto;
+        margin-right: 10px;
+    }
 }
 
 .purchases {
@@ -385,9 +450,32 @@ body {
     &:hover {
         color: $blue;
     }
+
+    @include r(768) {
+        order: 3;
+    }
 }
 
+.stars {
+    @include r(768) {
+        order: 4;
+        margin-left: auto;
+    }
 
+    @include r(500) {
+        display: none;
+    }
+}
+
+.word {
+    &--blue {
+        color: $blue;
+    }
+
+    &--pink {
+        color: $pink;
+    }
+}
 
 .social {
     @include reset;

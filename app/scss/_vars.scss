@@ -11,3 +11,15 @@ $bg-blue: #2b4ed0;
     margin: 0;
     padding: 0;
 }
+
+@mixin r($width) {
+    @media only screen and (max-width: $width+ "px") {
+        @content;
+    }
+}
+
+@mixin rmin($width) {
+    @media only screen and (min-width: $width+ "px") {
+        @content;
+    }
+}

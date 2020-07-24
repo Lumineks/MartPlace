@@ -1,21 +1,45 @@
 .statistics {
     background-color: #212225;
-   
+
     padding: 90px 0 88px;
+
     &__inner {
         display: flex;
         justify-content: space-between;
+
+        @include r(1150) {
+            flex-wrap: wrap;
+        }
     }
+
     &__item {
         max-width: 180px;
         text-align: center;
+
         &+& {
             margin-left: 231px;
         }
+
         &:last-child {
             margin-left: 211px;
         }
+
+        @include r(1150) {
+            max-width: 100%;
+            width: 50%;
+            margin-bottom: 30px;
+
+            &+& {
+                margin-left: 0;
+            }
+        }
+
+        @include r(500) {
+            width: 100%;
+            margin-bottom: 50px;
+        }
     }
+
     &__icon {
         width: 50px;
         height: 50px;
@@ -23,26 +47,40 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+
+        @include r(1150) {
+            margin-bottom: 30px;
+        }
     }
+
     &__number {
         font-size: 36px;
         margin-bottom: 9px;
+
         &--1 {
             color: #feb71d;
         }
+
         &--2 {
             color: #58c9e9;
         }
+
         &--3 {
             color: #77de51;
         }
+
         &--4 {
             color: #ff6a6d;
         }
     }
+
     &__text {
         font-size: 18px;
         line-height: 36px;
         color: #fff;
+    }
+
+    @include r(1150) {
+        padding: 50px 0;
     }
 }

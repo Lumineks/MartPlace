@@ -3,15 +3,15 @@
     background-color: #fff;
     text-align: center;
 
-    &__title {       
-        margin-bottom: 26px;       
+    &__title {
+        margin-bottom: 26px;
     }
 
     &__text {
         max-width: 720px;
         text-align: center;
         margin: 0 auto 55px;
-        
+
     }
 
     &__inner {
@@ -19,6 +19,11 @@
         background-color: transparent;
         margin-bottom: 58px;
         position: relative;
+
+        @include r(1300) {
+            max-width: 80%;
+            margin: 0 auto;
+        }
     }
 
     &__item {
@@ -30,7 +35,16 @@
         text-align: left;
         box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
         margin-right: 30px;
+
+        @include r(1300) {
+            max-width: 100%;
+        }
+
+        @include r(500) {
+            padding: 15px;
+        }
     }
+
     &__item-text {
         max-height: 120px;
         overflow: auto;
@@ -46,29 +60,57 @@
             cursor: pointer;
         }
     }
+
     &__user {
         height: 80px;
         margin-bottom: 31px;
     }
 
-    &__avatar {    
+    &__avatar {
         width: 80px;
         height: 80px;
         margin-right: 19px;
         margin-top: -7px;
+
+        @include r(500) {
+            top: 7px;
+            margin-right: 0;
+            width: 50px;
+            height: 50px;
+        }
+
+        @include r(380) {
+            display: none;
+        }
     }
 
     &__user-name {
-        
         padding-left: 96px;
         font-size: 20px;
         color: #000;
+
+        @include r(500) {
+            padding-left: 60px;
+            font-size: 17px;
+            max-width: 180px;
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+        }
+
+        @include r(380) {
+            padding-left: 0;
+        }
     }
 
     &__user-profession {
         display: block;
         width: 100%;
         font-size: 16px;
+
+        @include r(500) {
+            font-size: 14px;
+        }
     }
 
     &__link {
@@ -84,6 +126,14 @@
         &:hover {
             transform: scale(1.1);
         }
+
+        @include r(768) {
+            width: 45px;
+        }
+
+        @include r(500) {
+            width: 35px;
+        }
     }
 
     &__link-all {
@@ -98,6 +148,10 @@
 
         &:active {
             box-shadow: inset 7px 7px 7px 7px rgba(0, 0, 0, 0.3);
+        }
+
+        @include r(1400) {
+            margin-top: 40px;
         }
     }
 
@@ -137,10 +191,26 @@
 
         &--prev {
             left: -25px;
+
+            @include r(768) {
+                left: -40px;
+            }
         }
 
         &--next {
             right: -25px;
+
+            @include r(768) {
+                right: -40px;
+            }
         }
+
+        @include r(768) {
+            display: none;
+        }
+    }
+
+    @include r(768) {
+        padding: 60px 0;
     }
 }

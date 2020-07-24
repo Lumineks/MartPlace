@@ -1,10 +1,12 @@
 .weekly-products {
     padding: 109px 0;
+
     .card {
         &::after {
             display: none;
         }
     }
+
     &__top {
         margin-bottom: 50px;
     }
@@ -15,11 +17,21 @@
         &:hover {
             background-color: rgba($pink, 0.8);
         }
+
+        @include r(768) {
+            &:hover {
+                background-color: $pink;
+            }
+        }
     }
 
     &__item {
         display: flex !important;
         align-content: stretch;
+
+        @include r(768) {
+            flex-wrap: wrap;
+        }
     }
 
     &__link {
@@ -27,6 +39,14 @@
         max-width: 555px;
         width: 100%;
         height: 456px;
+
+        @include r(768) {
+            max-width: 100%;
+        }
+
+        @include r(500) {
+            height: 360px;
+        }
     }
 
     &__image {
@@ -40,6 +60,11 @@
         width: 100%;
         padding: 44px 49px 25px;
         min-height: 450px;
+
+        @include r(768) {
+            max-width: 100%;
+            padding: 15px 15px 0;
+        }
     }
 
     &__description {
@@ -119,5 +144,9 @@
 
     &__stars {
         margin-left: auto;
+    }
+
+    @include r(768) {
+        padding: 50px 0;
     }
 }

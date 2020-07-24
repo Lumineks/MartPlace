@@ -1,19 +1,28 @@
 .reasons {
     padding: 120px 0 91px;
     text-align: center;
+
     &__title {
-        margin-bottom: 25px;        
+        margin-bottom: 25px;
     }
+
     &__description {
         max-width: 720px;
         margin: 0 auto;
         margin-bottom: 55px;
     }
+
     &__inner {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @include r(1150) {
+            justify-content: space-around;
+
+        }
     }
+
     &__item {
         max-width: 360px;
         padding: 54px 33px 47px;
@@ -21,18 +30,20 @@
         border-radius: 4px;
         position: relative;
         transition: all .3s;
-        span {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-weight: 300;
-            font-size: 48px;
-            color: #5c87f8;
-            opacity: .2;
-        }
         background-color: #fff;
         box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
     }
+
+    &__number {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-weight: 300;
+        font-size: 48px;
+        color: #5c87f8;
+        opacity: .2;
+    }
+
     &__icon {
         width: 60px;
         height: 60px;
@@ -41,9 +52,18 @@
         background-size: contain;
         background-position: center;
     }
+
     &__name {
         margin-bottom: 20px;
         font-size: 24px;
         color: #000;
+
+        @include r(768) {
+            font-size: 22px;
+        }
+    }
+
+    @include r(768) {
+        padding: 50px 0;
     }
 }

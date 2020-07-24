@@ -2,6 +2,7 @@
     padding: 60px 0 54px;
     background-color: #fff;
     position: relative;
+
     &::after {
         content: "";
         position: absolute;
@@ -15,28 +16,37 @@
         height: 100%;
         background-color: #e8eaf3;
     }
+
     &__inner {
         display: flex;
         justify-content: space-between;
+
+        @include r(1150) {
+            flex-wrap: wrap;
+        }
     }
+
     &__item {
         text-align: center;
         max-width: 391px;
         font-size: 24px;
         color: #000;
-        &--1 {
-            margin-left: 86px;
-            span {
-                color: $blue;
+
+        @include r(1150) {
+            max-width: 50%;
+            width: 100%;
+
+            &--1,
+            &--2 {
+                margin: 0 0 50px;
             }
         }
-        &--2 {
-            margin-right: 150px;
-            span {
-                color: $pink;
-            }
+
+        @include r(768) {
+            max-width: 100%;
         }
     }
+
     &__image {
         display: block;
         max-width: 180px;
@@ -45,5 +55,14 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+    }
+
+
+    @include r(1150) {
+        padding: 60px 0 0;
+
+        &::after {
+            display: none;
+        }
     }
 }

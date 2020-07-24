@@ -3,11 +3,24 @@
         padding: 113px 115px 103px;
         background-color: #262b30;
         line-height: 26px;
+
+        @include r(1400) {
+            padding: 116px 0 103px;
+        }
+
+        @include r(1150) {
+            padding: 50px 0 30px;
+        }
     }
 
     &__inner {
         display: flex;
         justify-content: space-between;
+
+        @include r(1150) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
     }
 
     &__item {
@@ -34,15 +47,42 @@
         &--newsletter {
             max-width: 360px;
         }
+
+        @include r(1150) {
+            margin-right: 0;
+            padding-right: 0;
+
+            &--info,
+            &--newsletter {
+                max-width: 100%;
+                width: 100%;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            &--newsletter {
+                margin-bottom: 0;
+                margin-top: 30px;
+            }
+        }
+
+        @include r(500) {
+            max-width: 100%;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
     }
 
     &__content {
         margin-top: 24px;
         font-style: normal;
     }
+
     &__list {
         @include reset;
     }
+
     &__title {
         margin-top: 15px;
         font-size: 18px;
@@ -85,6 +125,13 @@
                 content: "\e818";
             }
         }
+
+        @include r(1150) {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
     }
 
     &__address {
@@ -99,6 +146,19 @@
             font-family: 'Linearicons-Free';
             font-size: 16px;
             color: #fff;
+        }
+
+        @include r(1150) {
+            width: fit-content;
+            margin: 0 auto;
+
+            &::before {
+                top: 2px;
+            }
+        }
+
+        @include r(500) {
+            padding-left: 20px;
         }
     }
 
@@ -118,6 +178,16 @@
         position: relative;
         margin-top: 34px;
         margin-bottom: 47px;
+
+        @include r(1150) {
+            max-width: 60%;
+            margin: 0 auto 47px;
+        }
+
+        @include r(768) {
+            max-width: 95%;
+            margin: 0 auto 47px;
+        }
     }
 
     &__input {
@@ -125,8 +195,8 @@
         height: 50px;
         padding-left: 30px;
         padding-right: 115px;
-      outline: transparent;
-      
+        outline: transparent;
+
         font-size: 15px;
         color: #000;
         border-radius: 25px;
@@ -181,6 +251,17 @@
 
         span {
             color: #fff;
+        }
+
+        @include r(500) {
+            padding: 15px 0;
+        }
+    }
+
+    @include r(380) {
+        &__social-link {
+            width: 37px;
+            height: 37px;
         }
     }
 }

@@ -44,6 +44,14 @@
         &:active {
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
         }
+
+        @include r(768) {
+            padding-right: 12px;
+        }
+
+        @include r(380) {
+            display: none;
+        }
     }
 
     &__filter-list {
@@ -118,6 +126,25 @@
             background-color: $blue;
             color: #fff;
         }
+
+        @include r(768) {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+
+            &::-webkit-scrollbar {
+                height: 5px;
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 3px;
+                background-color: #000;
+            }
+        }
+
+        @include r(500) {
+            padding-left: 10px;
+        }
     }
 
     &__filters-item {
@@ -141,25 +168,57 @@
         &:active {
             box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.66);
         }
+
+        @include r(768) {
+            white-space: nowrap;
+        }
     }
+
     &__inner {
         overflow-x: hidden;
     }
+
     &__items {
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
         margin-right: -30px;
+
+        @include r(1150) {
+            justify-content: center;
+        }
+
+        @include r(768) {
+            margin-right: 0;
+        }
     }
 
     &__item {
         max-width: calc(100% / 3 - 30px);
         margin-right: 30px;
         margin-bottom: 30px;
+
+        @include r(1150) {
+            max-width: 45%;
+            margin: 0 15px 30px;
+        }
+
+        @include r(630) {
+            max-width: 100%;
+        }
+
+        @include r(500) {
+            max-width: 100%;
+            margin: 0 0 30px;
+        }
     }
 
     &__info {
         padding: 24px 28px 0;
+
+        @include r(500) {
+            padding: 15px 15px 0;
+        }
     }
 
     &__text {
@@ -209,6 +268,10 @@
 
     &__purchases {
         margin-left: auto;
+
+        @include r(500) {
+            margin-left: 0;
+        }
     }
 
     &__all-btn {
@@ -236,5 +299,9 @@
             background-color: $blue;
             color: #fff;
         }
+    }
+
+    @include r(768) {
+        padding: 50px 0;
     }
 }

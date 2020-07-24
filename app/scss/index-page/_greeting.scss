@@ -7,22 +7,49 @@
     padding: 170px 0;
     min-height: 725px;
     position: relative;
+
     &__title {
         margin-bottom: 30px;
         font-size: 60px;
         line-height: 70px;
         text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+
         span {
             display: block;
             font-weight: 700;
         }
+
+        @include r(768) {
+            font-size: 36px;
+            line-height: 56px;
+        }
+
+        @include r(500) {
+            font-size: 24px;
+            line-height: 48px;
+        }
     }
+
     &__text {
         @include reset;
         font-weight: 500;
         font-size: 20px;
         margin-bottom: 65px;
+
+        @include r(768) {
+            font-size: 18px;
+        }
+
+        @include r(600) {
+            margin-bottom: 35px;
+        }
+
+        @include r(500) {
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
     }
+
     &__btn {
         padding: 11px 30px;
         box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
@@ -30,18 +57,32 @@
         border-radius: 27px;
         background-color: transparent;
         transition: all .3s;
+
         &:hover,
         &:focus {
             background-color: #fff;
             color: $bg-blue;
         }
+
         &:active {
             box-shadow: inset 0px 3px 0 0px rgba(0, 0, 0, 0.66);
         }
+
         &+& {
             margin-left: 30px;
         }
+
+        @include r(500) {
+            padding: 11px 12px;
+        }
+
+        @include r(380) {
+            margin: 0;
+            width: 200px;
+            margin-bottom: 15px;
+        }
     }
+
     &__search {
         display: flex;
         position: absolute;
@@ -55,6 +96,7 @@
         background-color: #fff;
         box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
         border-radius: 6px;
+
         &::after,
         &::before {
             position: absolute;
@@ -67,17 +109,25 @@
             opacity: 0.502;
             z-index: -1;
         }
+
         &::before {
             width: 97%;
             top: -13px;
             background-image: url(../images/search-bg-1.jpg);
         }
+
         &::after {
             width: 94%;
             top: -26px;
             background-image: url(../images/search-bg-2.jpg);
         }
+
+        @include r(768) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
+
     &__input {
         max-width: 610px;
         padding: 0 28px;
@@ -87,18 +137,27 @@
         transition: all .3s;
         outline: transparent;
         border-radius: 4px 0 0 4px;
+
         &::placeholder {
             font-weight: 400;
             font-size: 16px;
             color: $gray;
         }
+
         &:hover {
             border-color: rgb(71, 190, 181);
         }
+
         &:focus {
             border-color: #000;
         }
+
+        @include r(768) {
+            max-width: 100%;
+            margin-bottom: 15px;
+        }
     }
+
     &__list {
         margin-right: 30px;
         max-width: 195px;
@@ -117,17 +176,45 @@
         position: relative;
         background: url(../images/icons/arrow-down.svg) no-repeat right;
         background-position-x: 160px;
+
         &.active {
             background: url(../images/icons/arrow-up.svg) no-repeat right;
             background-position-x: 160px;
         }
+
         &:hover {
             border-color: rgb(71, 190, 181);
         }
+
         &:focus {
             border-color: #000;
         }
+
+        @include r(768) {
+            max-width: 47%;
+            background-position-x: 95%;
+            border: 1px solid #dcdcdc;
+            border-left-color: #dcdcdc;
+
+            &.active {
+                background-position-x: 95%;
+            }
+        }
+
+        @include r(600) {
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 15px;
+            background-position-x: 95%;
+        }
+
+        @include r(500) {
+            margin-bottom: 20px;
+            margin-right: 0;
+
+        }
     }
+
     &__search-btn {
         padding: 7px 68px;
         line-height: 42px;
@@ -138,11 +225,45 @@
         color: #fff;
         cursor: pointer;
         transition: all .3s;
+
         &:hover {
             background-color: $bg-blue;
         }
+
         &:active {
             box-shadow: inset 0px 3px 0 0px rgba(0, 0, 0, 0.66);
         }
+
+        @include r(768) {
+            padding: 7px 36px;
+            width: 47%;
+        }
+
+        @include r(600) {
+            width: 100%;
+        }
     }
+
+    @include r(768) {
+        padding: 100px 0 170px;
+        min-height: 700px;
+    }
+
+    @include r(600) {
+        &__buttons {
+            margin-bottom: 25px;
+        }
+    }
+
+    @include r(380) {
+        padding-top: 50px;
+        min-height: 750px;
+
+        &__buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
 }
