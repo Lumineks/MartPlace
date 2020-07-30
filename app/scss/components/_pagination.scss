@@ -1,0 +1,105 @@
+.pagination {
+    display: flex;
+    margin-left: auto;
+    margin-top: 38px;
+    width: fit-content;
+
+    @include r(380) {
+        margin: 0 auto;
+
+    }
+
+    &__arrow {
+        display: inline-block;
+        width: 50px;
+        height: 38px;
+        background-color: $pink;
+        border-radius: 19px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s;
+
+        &:not(.disabled) {
+            &:hover {
+                opacity: .7;
+            }
+
+            &:active {
+                box-shadow: inset 2px 2px 2px 2px #000;
+            }
+        }
+
+        &::before {
+            font-family: 'Linearicons-Free';
+            color: #fff;
+            font-size: 16px;
+        }
+
+        &--prev {
+            margin-right: 20px;
+        }
+
+        &--next {
+            margin-left: 20px;
+        }
+
+        &.disabled {
+            background-color: #fff;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &::before {
+                color: #000;
+            }
+        }
+
+        @include r(380) {
+            display: none;
+        }
+    }
+
+    &__list {
+        @include reset;
+        display: flex;
+    }
+
+    &__item {
+        transition: all .3s;
+
+        &+& {
+            margin-left: 5px;
+        }
+
+    }
+
+    &__link {
+        display: inline-block;
+        width: 50px;
+        height: 38px;
+        border-radius: 19px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        color: #555;
+
+        &.active {
+            background-color: $blue;
+            color: #fff;
+        }
+
+        &:not(.disabled) {
+            &:hover {
+                font-size: 18px;
+            }
+
+            &:active {
+                box-shadow: inset 1px 1px 1px 1px #000;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,169 @@
+.forms-page {
+    padding: 73px 0 120px;
+    background-color: #eff1f5;
+
+    &__form {
+        max-width: 555px;
+        margin: 0 auto;
+        padding: 55px 47px;
+        border-radius: 4px;
+        box-shadow: 0px 2px 4px 0 rgba(108, 111, 115, 0.1);
+        background-color: #fff;
+
+        &--recover {
+            padding-bottom: 29px;
+        }
+
+        @include r(500) {
+            padding: 20px 15px;
+        }
+    }
+
+    &__title {
+        @include reset;
+        //Чтобы при смене тега на заголовок например, не было стандартных отступов
+        text-align: center;
+        margin-bottom: 18px;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 28px;
+        color: #000;
+
+        @include r(500) {
+            font-size: 24px;
+        }
+    }
+
+    &__description {
+        text-align: center;
+        margin-bottom: 18px;
+        padding-bottom: 30px;
+        font-size: 16px;
+        line-height: 28px;
+        color: #555;
+        border-bottom: 1px solid #e8ebf0;
+
+        &--recover {
+            text-align: left;
+            margin-bottom: 26px;
+        }
+    }
+
+    &__inputs {
+        margin-bottom: 27px;
+
+        &--recover {
+            margin-bottom: 33px;
+        }
+    }
+
+    &__label {
+        display: inline-block;
+        margin-bottom: 5px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        color: #000;
+
+        &--radio {
+            margin-bottom: 25px;
+            color: #555;
+            padding-left: 35px;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 5px;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #c7c7c7;
+                border-radius: 50%;
+
+            }
+        }
+    }
+
+    &__input {
+        display: block;
+        margin-bottom: 23px;
+        width: 100%;
+        height: 51px;
+        padding: 0 21px;
+        font-size: 16px;
+        color: #000;
+        border: 1px solid transparent;
+        background-color: #f4f5f8;
+        transition: all .3s;
+        outline: transparent;
+        border-radius: 4px;
+
+        &::placeholder {
+            font-size: 16px;
+            color: #898f96;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: #000;
+        }
+    }
+
+    &__radio-wrapper {
+        position: relative;
+    }
+
+    &__radio {
+        opacity: 0;
+        width: 1px;
+        height: 1px;
+        position: absolute;
+
+        &:checked+.forms-page__label--radio::before {
+            background-image: url(../images/icons/radio.svg);
+            border-radius: 0;
+            border: none;
+        }
+    }
+
+    &__btn {
+        display: block;
+        margin-bottom: 32px;
+        height: 50px;
+        min-width: 190px;
+        border-radius: 25px;
+        text-align: center;
+        background-color: $blue;
+        color: #fff;
+        border: none;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @include r(768) {
+            display: block;
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        color: #898f96;
+
+        @include r(768) {
+            display: block;
+        }
+    }
+
+    &__link {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @include r(768) {
+        padding: 60px 0;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('./parts/_head.html')
+
+<body>
+
+    <div class="wrapper">
+        <div class="content">
+
+            @@include('./parts/_header.html') 
+            <!-- @@include('./parts/_breadcrumbs-login.html') -->
+            @@include('./parts/_breadcrumbs.html', {                
+                page_modifier: "breadcrumbs--login",
+                item: "Login",
+                title: "Login"
+            })
+
+            <main class="main">
+                <section class="login forms-page">
+                    <div class="container">                         
+                            <form class="forms-page__form">
+                                <div class="forms-page__title">
+                                    Welcome Back
+                                </div>
+                                <div class="forms-page__description">
+                                    You can sign in with your username
+                                </div>
+                                <div class="forms-page__inputs">
+                                    <label class="login__label">
+                                    Username
+                                     </label>
+                                    <input class="forms-page__input" type="text" placeholder="Enter your username..." required>
+
+                                    <label class="forms-page__label">
+                                    Password
+                                     </label>
+                                    <input class="forms-page__input" type="password" placeholder="Enter your password..." required>
+                                </div>
+
+                                <div class="forms-page__radio-wrapper">
+                                    <input class="forms-page__radio" id="radio" type="radio">
+                                    <label class="forms-page__label forms-page__label--radio" for="radio">Remember me</label>
+                                </div>
+
+                                <button class="forms-page__btn btn" type="submit">Login Now</button>
+
+                                <div class="forms-page__wrapper">
+                                    <div class="forms-page__text">
+                                        Lost your <a class="forms-page__link word word--blue" href="#">username</a> or <a class="forms-page__link word word--blue" href="#">password?</a>
+                                    </div>
+
+                                    <div class="forms-page__text">
+                                        Don't have an <a class="forms-page__link word word--blue" href="#">account?</a>
+                                    </div>
+                                </div>
+                            </form>
+                        
+                    </div>
+                </section>
+            </main>
+
+        </div>
+
+        @@include('./parts/_footer.html')
+
+    </div>
+
+    @@include('./parts/_script.html')
+
+</body>
+
+</html>

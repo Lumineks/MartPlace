@@ -2,16 +2,19 @@
 <html lang="en">
 
 @@include('./parts/_head.html')
-
+ 
 <body>
 
     <div class="wrapper">
         <div class="content">
             @@include('./parts/_header.html') 
-            @@include('./category-page/_breadcrumbs.html')
+
+            @@include('./parts/_page-top.html', {
+                name: '"item": "Category Page Grid"',
+                modifier: '"page_modifier": "breadcrumbs--category"'
+            })
 
             <main class="main">
-                
 
                 @@include('./category-page/_category.html')
 

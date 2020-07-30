@@ -135,6 +135,7 @@
     }
 
     &__address {
+        display: inline-block;
         padding-left: 30px;
         position: relative;
 
@@ -184,7 +185,7 @@
             margin: 0 auto 47px;
         }
 
-        @include r(768) {
+        @include r(500) {
             max-width: 95%;
             margin: 0 auto 47px;
         }

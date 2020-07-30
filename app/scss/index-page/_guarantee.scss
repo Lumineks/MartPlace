@@ -41,8 +41,10 @@
                 margin: 0 0 50px;
             }
         }
-
-        @include r(768) {
+        @include r(760) {
+        font-size: 18px;
+        }
+        @include r(500) {
             max-width: 100%;
         }
     }

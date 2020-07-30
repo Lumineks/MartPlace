@@ -1,0 +1,254 @@
+@import 'contacts/top';
+
+.contacts {
+    padding: 121px 0 0;
+    background-color: #eff1f5;
+    color: #555;
+
+    &__title {
+        font-weight: 400;
+        margin-bottom: 25px;
+    }
+
+    &__description {
+        margin: 0 auto 53px;
+        max-width: 671px;
+        text-align: center;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 52px;
+
+        @include r(1050) {
+            justify-content: space-around;
+
+        }
+
+        @include r(940) {
+            justify-content: space-between;
+        }
+
+        @include r(768) {
+            flex-wrap: wrap;
+        }
+
+        @include r(500) {
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        padding-top: 141px;
+        max-width: 360px;
+        width: 100%;
+        height: 295px;
+        border-radius: 4px;
+        box-shadow: 0px 2px 4px 0 rgba(108, 111, 115, 0.1);
+        background-color: #fff;
+        position: relative;
+
+        &::before {
+            font-family: 'Linearicons-Free';
+            font-size: 48px;
+            color: $blue;
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @include r(1050) {
+            max-width: 260px;
+        }
+
+        @include r(940) {
+            max-width: 240px;
+        }
+
+        @include r(768) {
+            max-width: 48%;
+
+            &--email {
+                max-width: 80%;
+                margin: 30px auto 0;
+
+            }
+        }
+
+        @include r(500) {
+            max-width: 90%;
+            padding-top: 90px;
+            padding-bottom: 15px;
+            height: auto;
+            &::before {
+                top: 30px;
+            }
+            &+& {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    &__item-title {
+        margin-bottom: 23px;
+        font-weight: 500;
+        font-size: 20px;
+        color: #000;
+        text-align: center;
+
+        @include r(500) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__text {
+        margin: 0 auto;
+        max-width: 236px;
+        text-align: center;
+        font-style: normal;
+    }
+
+    &__link {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    &__form {
+        max-width: 100%;
+        min-height: 592px;
+        padding: 48px 0;
+        margin-bottom: 111px;
+        border-radius: 4px;
+        box-shadow: 0px 2px 4px 0 rgba(108, 111, 115, 0.1);
+        background-color: #fff;
+
+        @include r(768) {
+            margin-bottom: 45px;
+        }
+
+        @include r(500) {
+            padding: 30px 0;
+        }
+    }
+
+    &__form-title {
+        margin-bottom: 48px;
+        padding-bottom: 15px;
+        font-size: 24px;
+        line-height: 42px;
+        color: #000;
+        text-align: center;
+        border-bottom: 1px solid #e8ebf0;
+        @include r(500) {
+        font-size: 22px;
+        }
+    }
+
+    &__form-inner {
+        max-width: 750px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__input {
+        display: inline-block;
+        margin-bottom: 30px;
+        max-width: 361px;
+        width: 100%;
+        height: 50px;
+        padding: 0 51px;
+        color: #000;
+        border: 1px solid #e7e7e7;
+        transition: all .3s;
+        outline: transparent;
+
+        &:nth-child(even) {
+            padding: 0 20px;
+        }
+
+        &::placeholder {
+            font-size: 16px;
+            color: #9e9e9e;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: #000;
+        }
+
+        @include r(768) {
+            &:nth-child(even) {
+                padding: 0 51px;
+            }
+            margin: 0 auto 30px;
+            
+            max-width: 90%;
+        }
+    }
+
+    &__textarea {
+        display: block;
+        margin: 0 auto 34px;
+        padding: 20px 51px;
+        max-width: 750px;
+        width: 100%;
+        min-height: 133px;
+        resize: none;
+        border: 1px solid #e7e7e7;
+        transition: all .3s;
+        outline: transparent;
+
+        &::placeholder {
+            font-size: 16px;
+            color: #9e9e9e;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: #000;
+        }
+
+        @include r(768) {           
+            max-width: 90%;
+        }
+    }
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        min-width: 170px;
+        height: 50px;
+        text-align: center;
+        border: none;
+        color: #fff;
+        background-color: $blue;
+        border-radius: 25px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__map {
+        max-width: 100%;
+        height: 412px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        @include r(500) {
+            height: 300px;
+        }
+    }
+
+    @include r(768) {
+        padding-top: 60px;
+    }
+}

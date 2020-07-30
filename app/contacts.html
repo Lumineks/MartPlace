@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('./parts/_head.html')
+
+<body>
+
+    <div class="wrapper">
+        <div class="content">
+
+            @@include('./parts/_header.html')
+
+            <main class="main">
+
+                @@include('./contacts-page/_top.html')
+
+                <section class="contacts">
+                    <div class="container">
+                        <div class="contacts__inner">
+                            <div class="contacts__title title-promo">
+                                How can We <span>Help?</span>
+                            </div>
+                            <div class="contacts__description">
+                                Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats. Lid est laborum dolo rumes fugats untras.
+                            </div>
+
+                            <div class="contacts__items">
+                                <div class="contacts__item lnr-map-marker">
+                                    <div class="contacts__item-title">
+                                        Office Address
+                                    </div>
+                                    <address class="contacts__text">
+                                    202 New Hampshire Avenue
+                                    Northwest #100, New York-2573
+                                     </address>
+                                </div>
+                                <div class="contacts__item lnr-phone">
+                                    <div class="contacts__item-title">
+                                        Phone Number
+                                    </div>
+                                    <div class="contacts__text">
+                                        <a class="contacts__link" href="tel:18006424500">1-800-643-4500</a>
+                                        <a class="contacts__link" href="tel:18006424500">1-800-643-4500</a>
+                                    </div>
+                                </div>
+                                <div class="contacts__item contacts__item--email lnr-inbox">
+                                    <div class="contacts__item-title">
+                                        Email Address
+                                    </div>
+                                    <a class="contacts__link" href="mailto:support@aazztech.com">support@aazztech.com</a>
+                                    <a class="contacts__link" href="mailto:support@aazztech.com">support@aazztech.com</a>
+                                </div>
+                            </div>
+
+                            <form class="contacts__form">
+                                <div class="contacts__form-title">
+                                    Leave Your Messages
+                                </div>
+
+                                <div class="contacts__form-inner">
+                                    <input class="contacts__input" type="text" placeholder="Name">
+                                    <input class="contacts__input" type="email" placeholder="Email">
+                                    <input class="contacts__input" type="text" placeholder="Subject">
+                                    <input class="contacts__input" type="text" placeholder="Phone">
+                                </div>
+                                <textarea class="contacts__textarea" placeholder="Your text here..."></textarea>
+                                <button class="contacts__btn btn" type="submit">
+                                    Send Request
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="contacts__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1469510.5405111348!2d-72.68716229952096!3d43.99787768466286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb3444b9dc0a6eb%3A0xd7c802af25a680eb!2z0J3RjNGOLdCl0Y3QvNC_0YjQuNGALCDQodCo0JA!5e0!3m2!1sru!2sua!4v1595606642875!5m2!1sru!2sua"
+                            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </section>
+
+
+
+            </main>
+
+
+
+        </div>
+
+        @@include('./parts/_footer.html')
+
+    </div>
+
+    @@include('./parts/_script.html')
+
+</body>
+
+</html>

@@ -239,10 +239,22 @@
     &__author-name {
         margin-right: 16px;
         padding-left: 38px;
+
+        @include r(768) {
+            max-width: 145px;
+            margin-right: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 
     &__category {
         padding-left: 25px;
+        @include r(768) {
+            padding-left: 20px;
+            margin-left: auto;
+        }
     }
 
     &__text {

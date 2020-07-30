@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('./parts/_head.html')
+
+<body>
+
+    <div class="wrapper">
+        <div class="content">
+
+            @@include('./parts/_header.html')
+            @@include('./parts/_breadcrumbs.html', {                
+                page_modifier: "breadcrumbs--login",
+                item: "Login",
+                title: "Login"
+            })
+
+            <main class="main">
+                <section class="login forms-page">
+                    <div class="container">
+                        
+                            <form class="forms-page__form">
+                                <div class="forms-page__title">
+                                    Create Your Account
+                                </div>
+                                <div class="forms-page__description">
+                                    Please fill the following fields with appropriate information to register a new MartPlace account.
+                                </div>
+                                <div class="forms-page__inputs">
+                                    <label class="forms-page__label">
+                                        Your Name
+                                    </label>
+                                    <input class="forms-page__input" type="text" placeholder="Enter your name..." required>
+    
+                                    <label class="forms-page__label">
+                                        Email Address
+                                    </label>
+                                    <input class="forms-page__input" type="email" placeholder="Enter your email address" required>
+    
+                                    <label class="forms-page__label">
+                                        Username
+                                    </label>
+                                    <input class="forms-page__input" type="text" placeholder="Enter your username..." required>
+    
+                                    <label class="forms-page__label">
+                                        Password
+                                    </label>
+                                    <input class="forms-page__input" type="password" placeholder="Enter your password..." required>
+                                  
+                                    <label class="forms-page__label">
+                                        Confirm Password
+                                    </label>
+                                    <input class="forms-page__input" type="password" placeholder="Enter your password..." required>
+                                </div>
+
+                                <button class="forms-page__btn btn" type="submit">Register Now</button>
+
+                                <div class="forms-page__wrapper">
+                                    <div class="forms-page__text">
+                                        Already have an account? <a class="forms-page__link word word--blue" href="#">Login</a>
+                                    </div>
+                                </div>
+                            </form>
+                        
+                    </div>
+                </section>
+            </main>
+
+        </div>
+
+        @@include('./parts/_footer.html')
+
+    </div>
+
+    @@include('./parts/_script.html')
+
+</body>
+
+</html>

@@ -215,10 +215,12 @@ body {
             opacity: 1;
         }
     }
-
+   
     &__top-btn {
-
-        padding: 5px 26px;
+        min-width: 130px;
+        height: 46px;   
+        padding: 7px 0;
+        text-align: center;
         background-color: transparent;
         color: #fff;
         font-weight: 500;
@@ -338,26 +340,10 @@ body {
         position: absolute;
         left: 0;
         background-repeat: no-repeat;
-
-        &--wp {
-            top: 7px;
-            width: 16px;
-            height: 16px;
-        }
-
-        &--psd {
-            top: 7px;
-            width: 13px;
-            height: 17px;
-
-        }
-
-        &--html {
-            top: 7px;
-            width: 17px;
-            height: 17px;
-
-        }
+        top: 7px;
+        width: 17px;
+        height: 17px;
+      
     }
 }
 
@@ -377,6 +363,8 @@ body {
     @include r(768) {
         flex-wrap: wrap;
         align-items: center;
+        padding-bottom: 12px;
+        justify-content: flex-end;
         height: 80px;
     }
 

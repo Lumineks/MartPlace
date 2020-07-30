@@ -36,6 +36,13 @@
         }
 
         @include r(768) {
+            max-width: 46%;
+            &--last {
+                max-width: 75%;
+            }
+        }
+
+        @include r(500) {
             max-width: 100%;
         }
     }
@@ -78,8 +85,21 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-
         position: relative;
+
+        @include r(768) {
+         justify-content: center;
+         flex-direction: column;
+         height: auto;
+         padding: 0;
+        }
+
+        @include r(500) {
+            padding-top: 20px;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 42px;
+        }
     }
 
     &__item-left {

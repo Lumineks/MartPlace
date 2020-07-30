@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('./parts/_head.html')
+
+<body>
+
+    <div class="wrapper">
+        <div class="content">
+
+            @@include('./parts/_header.html') 
+            @@include('./parts/_breadcrumbs.html', {                
+                page_modifier: "breadcrumbs--login",
+                item: "Login",
+                title: "Login"
+            })
+
+            <main class="main">
+                <section class="login forms-page">
+                    <div class="container">
+                        
+                            <form class="forms-page__form forms-page__form--recover">
+
+                                <div class="forms-page__description forms-page__description--recover">
+                                    Please enter the email address for your account. A verification code will be sent to you. Once you have received the verification code, you will be able to choose a new password for your account.
+                                </div>
+                                <div class="forms-page__inputs forms-page__inputs--recover">
+                                    <label class="forms-page__label">
+                                        Email Address
+                                     </label>
+                                    <input class="forms-page__input" type="email" placeholder="Enter your email address..." required>
+
+                                </div>
+
+                                <button class="forms-page__btn btn" type="submit">Submit Now</button>
+                            </form>
+                        
+                    </div>
+                </section>
+            </main>
+
+        </div>
+
+        @@include('./parts/_footer.html')
+
+    </div>
+
+    @@include('./parts/_script.html')
+
+</body>
+
+</html>
